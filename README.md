@@ -13,8 +13,8 @@ Gorew (@gorew.app) Instagram içerik dosyaları. Buradaki görseller ve videolar
 | `social/common.css`, `social/common.js` | Marka stilleri ve animasyon/bileşen yardımcıları (bildirim kartı, zincir onay kartı, rutin satırları, logo) |
 | `social/carousel.html?d=<deste>&s=<n>` | 1080×1350 kaydırmalı gönderi sayfaları; yeni deste = `DECKS` nesnesine yeni anahtar |
 | `social/reel1.html`, `reel2.html`, `story1.html` | 1080×1920 dikey video şablonları; `render(t)` kare kare zaman fonksiyonu |
-| `rec2.js` | `node rec2.js page.html 1080 1920 <sn> out.mp4` → 30 fps sessiz video; sona zaman yazılırsa (`... out 1.5 4`) sadece kare görüntüleri |
-| `shots.js` | `node shots.js social/carousel.html c3 6 ../2026-w44` → carousel JPEG'leri |
+| `rec2.js` | `node rec2.js page.html 1080 1920 <sn> out.mp4` → 30 fps sessiz video; 2× süper örnekleme + lanczos küçültme, hafif doku (Instagram sıkıştırmasında bloklanmayı önler), CRF 14 (~0,55 sn/kare). Sona zaman yazılırsa (`... out 1.5 4`) sadece kare görüntüleri |
+| `shots.js` | `node shots.js social/carousel.html c3 6 ../2026-w44` → carousel JPEG'leri (2× çizim, en yüksek JPEG kalitesi) |
 | `music/synth.py` | `python3 music/synth.py <uplift|focus|pulse> <sn> out.wav` → özgün telifsiz müzik |
 | `sheet.py` | Kare görüntülerinden kontrol sayfası |
 
