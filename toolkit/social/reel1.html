@@ -1,0 +1,116 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Reel 1</title>
+<link rel="stylesheet" href="common.css"><style>html,body,#stage{width:1080px;height:1920px}</style></head><body>
+<div id="stage">
+  <div id="glowA" class="glow" style="background:radial-gradient(circle,rgba(75,103,246,.28) 0%,rgba(75,103,246,0) 60%)"></div>
+  <div id="glowB" class="glow" style="background:radial-gradient(circle,rgba(0,214,170,.17) 0%,rgba(0,214,170,0) 60%)"></div>
+
+  <div class="scene" id="s1">
+    <div class="a h1" id="s1h" style="left:90px;top:300px;font-size:112px;width:920px"><span class="ln"><span>İşler hâlâ</span></span><span class="ln"><span>WhatsApp'ta mı</span></span><span class="ln"><span class="grad">kayboluyor?</span></span></div>
+    <div id="nts"></div>
+  </div>
+
+  <div class="scene" id="s2">
+    <div class="a" id="ring" style="left:390px;top:610px;width:300px;height:300px;border-radius:50%;border:4px solid #00d0c8"></div>
+    <img class="a" id="lgIcon" src="../assets/logo_icon.png" style="left:420px;top:640px;width:240px;height:238px">
+    <img class="a" id="lgWord" src="../assets/logo_word.png" style="left:290px;top:940px;width:500px;height:126px">
+    <div class="a sub" id="s2s" style="left:0;top:1130px;width:1080px;text-align:center;font-size:46px;color:#cfd5df">Hepsi tek yerde.</div>
+  </div>
+
+  <div class="scene" id="s3">
+    <div class="a" style="left:90px;top:250px;width:920px">
+      <div class="label a" id="s3l" style="position:relative">GÖREV YÖNETİMİ</div>
+      <div class="h1" id="s3h" style="font-size:108px;margin-top:30px"><span class="ln"><span>Her görevin</span></span><span class="ln"><span class="grad">bir sahibi var.</span></span></div>
+    </div>
+    <div class="a" id="chips" style="left:90px;top:640px;display:flex;gap:16px">
+      <div class="chip"><i style="background:var(--red)"></i>Açık</div><div class="chip"><i style="background:var(--green)"></i>Yapılıyor</div><div class="chip"><i style="background:var(--blue)"></i>Hazır</div>
+    </div>
+    <img class="a shadow" id="phG" src="../assets/ph_gorevler.png" style="left:110px;top:800px;width:880px;height:1092px">
+  </div>
+
+  <div class="scene" id="s4">
+    <div class="a" style="left:90px;top:250px;width:920px">
+      <div class="label a" id="s4l" style="position:relative">ONAY SÜREÇLERİ</div>
+      <div class="h1" id="s4h" style="font-size:108px;margin-top:30px"><span class="ln"><span>Onaylar</span></span><span class="ln"><span class="grad">zincirle ilerler.</span></span></div>
+    </div>
+    <div id="chainBox" class="a" style="left:70px;top:660px"></div>
+    <img class="a shadow" id="phO" src="../assets/ph_onaylar.png" style="left:150px;top:1180px;width:800px;height:992px">
+  </div>
+
+  <div class="scene" id="s5">
+    <div class="a" style="left:90px;top:250px;width:920px">
+      <div class="label a" id="s5l" style="position:relative">RUTİNLER</div>
+      <div class="h1" id="s5h" style="font-size:108px;margin-top:30px"><span class="ln"><span>Rutin işler</span></span><span class="ln"><span class="grad">unutulmaz.</span></span></div>
+    </div>
+    <img class="a shadow" id="phH" src="../assets/ph_home.png" style="left:150px;top:1330px;width:800px;height:992px">
+    <div id="rowsBox" class="a" style="left:70px;top:650px"></div>
+    <div class="a card" id="toast" style="left:70px;top:1120px;width:940px;height:150px;background:#22252d;border:1px solid #3a2a2c;display:flex;align-items:center;gap:24px;padding:0 32px;box-shadow:0 30px 60px rgba(0,0,0,.6)">
+      <div style="width:80px;height:80px;border-radius:22px;background:rgba(240,69,58,.18);display:grid;place-items:center;flex:none">${''}</div>
+      <div><div style="font-size:32px;font-weight:700">Yöneticiye uyarı gönderildi</div><div style="font-size:26px;color:var(--mut);margin-top:6px">Ruhsat yenileme · 2 gün gecikti</div></div>
+    </div>
+  </div>
+
+  <div class="scene" id="s6">
+    <img class="a" id="eIcon" src="../assets/logo_icon.png" style="left:440px;top:440px;width:200px;height:198px">
+    <img class="a" id="eWord" src="../assets/logo_word.png" style="left:315px;top:690px;width:450px;height:114px">
+    <div class="a h1" id="tags" style="left:0;top:930px;width:1080px;text-align:center;font-size:76px;line-height:1.18;font-weight:600">
+      <div>Tek platform.</div><div class="grad">Net sorumluluk.</div><div>Ölçülebilir süreç.</div>
+    </div>
+    <div class="a" id="url" style="left:300px;top:1300px;width:480px;height:84px;border-radius:42px;border:2px solid #2f3540;display:grid;place-items:center;font-size:34px;font-weight:600;color:#e6e9ef">www.gorew.com.tr</div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+document.querySelector('#toast > div').innerHTML=ICON.bellRed;
+const NT=[
+ {x:70,y:860,r:-3,t:.5,c:'#2a9d5c',i:'chat',h:'Ekip Grubu',m:'şimdi',b:'Bu iş kimdeydi?',k:'48'},
+ {x:390,y:1010,r:2.5,t:.8,c:'#3d6fd6',i:'mail',h:'E-posta',m:'2 dk',b:'Re: Re: Fw: Teklif onayı?',k:''},
+ {x:60,y:1170,r:1.8,t:1.1,c:'#7a5af0',i:'file',h:'Ahmet',m:'5 dk',b:'Dosyanın son hali hangisi?',k:''},
+ {x:380,y:1320,r:-2.2,t:1.4,c:'#3d6fd6',i:'mail',h:'Muhasebe',m:'1 sa',b:'Fatura onayı hâlâ bekliyor',k:'132'},
+ {x:80,y:1480,r:3,t:1.7,c:'#d0453b',i:'cal',h:'Takvim',m:'gecikti',b:'Ruhsat yenileme gecikti',k:''},
+];
+const ntBox=$('nts');NT.forEach(n=>{n.el=notif(n);ntBox.appendChild(n.el);});
+const ch=chainCard('Satın alma · MacBook Pro','Planlama · 14 Nisan',STEPS);$('chainBox').appendChild(ch.root);
+const rr=routineRows([{t:'Sunucu yedek kontrolü',f:'Her gün · 15:00'},{t:'Haftalık stok sayımı',f:'Her pazartesi'},{t:'Ruhsat yenileme',f:'Yıllık · 14 Ekim',late:1}]);$('rowsBox').appendChild(rr.root);
+const chipsEls=[...document.querySelectorAll('#chips .chip')];
+function render(t){
+  glows(t);
+  if(scene($('s1'),t,0,3.6,.01,.35)){
+    reveal($('s1h'),t,.1);
+    const suck=ei(P(t,3.0,3.55));
+    NT.forEach((n,i)=>{const p=P(t,n.t,n.t+.4),e=eb(p);const cx=n.x+310,cy=n.y+58;
+      T(n.el,{x:Math.sin(t*1.7+i)*5+(540-cx)*suck,y:(1-e)*50+Math.cos(t*1.3+i)*6+(760-cy)*suck,s:L(.82,1,e)*(1-suck*.85),r:n.r*(1-suck)+suck*40*(i%2?1:-1),op:C(p*3)*(1-P(t,3.25,3.5))});});
+  }
+  if(scene($('s2'),t,3.45,5.4,.1,.3)){
+    const pin=pop(t,3.5,.5);T($('lgIcon'),{s:pin,r:(1-C(pin))*-120,op:C(P(t,3.5,3.7))});
+    const rp=P(t,3.75,4.6);T($('ring'),{s:1+eo(rp)*1.7,op:rp>0?(1-rp)*.7:0});
+    const wp=eo(P(t,3.9,4.4));$('lgWord').style.clipPath=`inset(0 ${(1-wp)*100}% 0 0)`;T($('lgWord'),{y:(1-wp)*20,op:wp});
+    fadeUp($('s2s'),t,4.3,.45,20);
+  }
+  if(scene($('s3'),t,5.3,9.3)){
+    fadeUp($('s3l'),t,5.4,.45,16);reveal($('s3h'),t,5.45);fadeUp($('chips'),t,5.9,.45,24);
+    const steps=[6.3,7.0,7.7];let k=-1;steps.forEach((s,i)=>{if(t>=s)k=i;});
+    chipsEls.forEach((c,i)=>{const col=['#f0453a','#2bd47f','#4b67f6'][i];const on=i===k;const pa=P(t,steps[i],steps[i]+.25);
+      c.style.transform=`scale(${on?1+Math.sin(Math.PI*pa)*.08:1})`;
+      if(i<=k){c.style.color='#fff';c.style.borderColor=on?col:'#3a3f4a';c.style.background=on?col+'26':'#1b1f27';}else{c.style.color='#7c8494';c.style.borderColor='#2c313b';c.style.background='#14171d';}});
+    const pIn=eo(P(t,5.4,6.3));T($('phG'),{y:(1-pIn)*300+Math.sin(t*1.2)*10,r:(1-pIn)*5,op:pIn});
+  }
+  if(scene($('s4'),t,9.2,13.2)){
+    fadeUp($('s4l'),t,9.3,.45,16);reveal($('s4h'),t,9.35);
+    fadeUp(ch.root,t,9.8,.5,40);ch.update(t,[10.5,11.0,11.5],11.8,12.1);
+    const pIn=eo(P(t,9.4,10.3));T($('phO'),{y:(1-pIn)*300+Math.sin(t*1.2)*10,op:pIn});
+  }
+  if(scene($('s5'),t,13.1,16.8)){
+    fadeUp($('s5l'),t,13.2,.45,16);reveal($('s5h'),t,13.25);
+    rr.update(t,13.6,[14.3,14.7,15.2]);
+    const hIn=eo(P(t,13.3,14.2));T($('phH'),{y:(1-hIn)*300+Math.sin(t*1.2)*10,op:hIn});
+    const tp=P(t,15.5,16.0);T($('toast'),{y:(1-eo(tp))*40,s:L(.92,1,eb(tp)),op:C(tp*2)});
+  }
+  if(scene($('s6'),t,16.7,21,.3,.01)){
+    const ip=P(t,16.8,17.3);T($('eIcon'),{s:pop(t,16.8,.5),r:(1-eo(ip))*-90,op:C(ip*3)});
+    const wp=eo(P(t,17.1,17.6));$('eWord').style.clipPath=`inset(0 ${(1-wp)*100}% 0 0)`;T($('eWord'),{op:wp});
+    [...$('tags').children].forEach((s,i)=>fadeUp(s,t,17.5+i*.3,.5,30));
+    fadeUp($('url'),t,18.6,.5,16);
+  }
+}
+window.render=render;window.ready=ready();autoplay(20);
+</script></body></html>

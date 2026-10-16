@@ -1,0 +1,61 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Reel 2</title>
+<link rel="stylesheet" href="common.css"><style>html,body,#stage{width:1080px;height:1920px}
+.num{font-family:'Inter Display';font-weight:800;font-size:220px;line-height:1;letter-spacing:-.04em}
+</style></head><body>
+<div id="stage">
+  <div id="glowA" class="glow" style="background:radial-gradient(circle,rgba(75,103,246,.28) 0%,rgba(75,103,246,0) 60%)"></div>
+  <div id="glowB" class="glow" style="background:radial-gradient(circle,rgba(0,214,170,.17) 0%,rgba(0,214,170,0) 60%)"></div>
+  <div class="scene" id="s0">
+    <div class="a h1" id="h0" style="left:90px;top:560px;width:920px;font-size:118px"><span class="ln"><span>Ekibinizin</span></span><span class="ln"><span>bir iş takip</span></span><span class="ln"><span>sistemine</span></span><span class="ln"><span class="grad">ihtiyacı var,</span></span></div>
+    <div class="a sub" id="s0s" style="left:90px;top:1150px;font-size:48px;color:#cfd5df">eğer bu 3 şeyden biri tanıdıksa…</div>
+  </div>
+  <div class="scene" id="s1">
+    <div class="a num grad" id="n1" style="left:90px;top:300px">1</div>
+    <div class="a h1" id="h1" style="left:90px;top:560px;width:920px;font-size:96px"><span class="ln"><span>“Bu iş kimdeydi?”</span></span><span class="ln"><span>diye soruluyorsa.</span></span></div>
+    <div id="b1"></div>
+  </div>
+  <div class="scene" id="s2">
+    <div class="a num grad" id="n2" style="left:90px;top:300px">2</div>
+    <div class="a h1" id="h2" style="left:90px;top:560px;width:920px;font-size:96px"><span class="ln"><span>Onaylar e-postada</span></span><span class="ln"><span>günlerce bekliyorsa.</span></span></div>
+    <div class="a card" id="mail" style="left:90px;top:900px;width:900px;height:360px;padding:40px 44px">
+      <div style="display:flex;align-items:center;gap:24px"><div style="width:84px;height:84px;border-radius:24px;background:#3d6fd6;display:grid;place-items:center">${''}</div>
+      <div><div style="font-size:30px;color:var(--mut)">Gelen kutusu</div><div class="h1" id="mailN" style="font-size:72px">0 okunmamış</div></div></div>
+      <div style="margin-top:36px;font-size:32px;color:#cfd5df;line-height:1.6">Re: Re: Fw: Satın alma onayı<br><span style="color:var(--mut)">Re: Teklif v3 son hali (2)</span></div>
+    </div>
+  </div>
+  <div class="scene" id="s3">
+    <div class="a num grad" id="n3" style="left:90px;top:300px">3</div>
+    <div class="a h1" id="h3" style="left:90px;top:560px;width:920px;font-size:96px"><span class="ln"><span>Rutin işler son gün</span></span><span class="ln"><span>hatırlanıyorsa.</span></span></div>
+    <div id="rowsBox" class="a" style="left:70px;top:900px"></div>
+  </div>
+  <div class="scene" id="s4">
+    <img class="a" id="eIcon" src="../assets/logo_icon.png" style="left:440px;top:440px;width:200px;height:198px">
+    <img class="a" id="eWord" src="../assets/logo_word.png" style="left:315px;top:690px;width:450px;height:114px">
+    <div class="a h1" id="t1" style="left:0;top:930px;width:1080px;text-align:center;font-size:70px;font-weight:600;line-height:1.2">Görev, onay ve rutinler</div>
+    <div class="a h1 grad" id="t2" style="left:0;top:1020px;width:1080px;text-align:center;font-size:70px;font-weight:600;line-height:1.2">tek platformda.</div>
+    <div class="a" id="url" style="left:300px;top:1260px;width:480px;height:84px;border-radius:42px;border:2px solid #2f3540;display:grid;place-items:center;font-size:34px;font-weight:600;color:#e6e9ef">www.gorew.com.tr</div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+document.querySelector('#mail .card, #mail div div').innerHTML=ICON.mail.replace('<svg ','<svg width="44" height="44" ');
+const B=[{x:90,y:900,r:-2,t:3.0,c:'#2a9d5c',i:'chat',h:'Ekip Grubu',m:'09:12',b:'Bu iş kimdeydi?',k:''},
+ {x:330,y:1060,r:2,t:3.35,c:'#2a9d5c',i:'chat',h:'Ekip Grubu',m:'11:40',b:'Kim bakıyordu buna?',k:''},
+ {x:110,y:1220,r:-1.5,t:3.7,c:'#2a9d5c',i:'chat',h:'Ekip Grubu',m:'16:05',b:'Ben sandım ki sen…',k:'48'}];
+B.forEach(n=>{n.el=notif(n);$('b1').appendChild(n.el);});
+const rr=routineRows([{t:'KDV beyannamesi',f:'Her ay · 26\'sı',late:1},{t:'Ruhsat yenileme',f:'Yıllık · 14 Ekim',late:1}]);$('rowsBox').appendChild(rr.root);
+function num(el,t,t0){const p=P(t,t0,t0+.5);T(el,{s:p>0?eb(p):0,r:(1-eo(p))*-20,op:C(p*3)});}
+function render(t){
+  glows(t);
+  if(scene($('s0'),t,0,2.6,.01,.3)){reveal($('h0'),t,.1,.09);fadeUp($('s0s'),t,.9,.5,20);}
+  if(scene($('s1'),t,2.5,5.6)){num($('n1'),t,2.6);reveal($('h1'),t,2.75);B.forEach((n,i)=>{const p=P(t,n.t,n.t+.4);T(n.el,{y:(1-eb(p))*50+Math.sin(t*1.5+i)*5,s:L(.85,1,eb(p)),r:n.r,op:C(p*3)});});}
+  if(scene($('s2'),t,5.5,8.6)){num($('n2'),t,5.6);reveal($('h2'),t,5.75);fadeUp($('mail'),t,6.2,.5,40);
+    const v=Math.round(132*eo(P(t,6.4,7.6)));$('mailN').textContent=v+' okunmamış';$('mailN').style.color=v>99?'#f0453a':'#fff';}
+  if(scene($('s3'),t,8.5,11.6)){num($('n3'),t,8.6);reveal($('h3'),t,8.75);rr.update(t,9.2,[9.9,10.4]);}
+  if(scene($('s4'),t,11.5,15.5,.3,.01)){
+    const ip=P(t,11.6,12.1);T($('eIcon'),{s:pop(t,11.6,.5),r:(1-eo(ip))*-90,op:C(ip*3)});
+    const wp=eo(P(t,11.9,12.4));$('eWord').style.clipPath=`inset(0 ${(1-wp)*100}% 0 0)`;T($('eWord'),{op:wp});
+    fadeUp($('t1'),t,12.3,.5,30);fadeUp($('t2'),t,12.6,.5,30);fadeUp($('url'),t,13.2,.5,16);}
+}
+window.render=render;window.ready=ready();autoplay(15);
+</script></body></html>
