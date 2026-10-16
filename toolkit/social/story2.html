@@ -1,0 +1,33 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Story 2</title>
+<link rel="stylesheet" href="common.css"><style>html,body,#stage{width:1080px;height:1920px}
+.tk{position:absolute;left:0;width:940px;height:124px;display:flex;align-items:center;gap:26px;padding:0 32px}
+.tk .rt{font-size:34px;font-weight:600}.tk .rf{font-size:25px;color:var(--mut);margin-top:4px}
+</style></head><body>
+<div id="stage">
+  <div id="glowA" class="glow" style="background:radial-gradient(circle,rgba(75,103,246,.3) 0%,rgba(75,103,246,0) 60%)"></div>
+  <div id="glowB" class="glow" style="background:radial-gradient(circle,rgba(0,214,170,.2) 0%,rgba(0,214,170,0) 60%)"></div>
+  <div class="scene" id="s0">
+    <div class="a pill" id="fri" style="left:90px;top:330px;background:rgba(75,103,246,.16);color:#9fb0ff;font-size:30px;height:68px">Cuma · Hafta sonu öncesi</div>
+    <div class="a h1" id="h0" style="left:90px;top:440px;width:920px;font-size:112px"><span class="ln"><span>Pazartesi</span></span><span class="ln"><span>ilk soru bu</span></span><span class="ln"><span class="grad">olmasın:</span></span></div>
+    <div id="list" class="a" style="left:70px;top:900px;width:940px;height:600px"></div>
+  </div>
+  <div class="scene" id="s1">
+    <div class="a h1" id="h1" style="left:0;top:520px;width:1080px;text-align:center;font-size:104px"><span class="ln"><span>Gorew'de</span></span><span class="ln"><span class="grad">cevap hazır.</span></span></div>
+    <img class="a" id="eIcon" src="../assets/logo_icon.png" style="left:450px;top:900px;width:180px;height:179px">
+    <div class="a sub" id="s1s" style="left:0;top:1130px;width:1080px;text-align:center;font-size:40px;color:#cfd5df">Her işin sahibi, tarihi, durumu belli.</div>
+    <div class="a" id="url" style="left:300px;top:1260px;width:480px;height:84px;border-radius:42px;border:2px solid #2f3540;display:grid;place-items:center;font-size:34px;font-weight:600;color:#e6e9ef">www.gorew.com.tr</div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+const TK=[];
+const items=TK.map((k,i)=>{const d=el(`<div class="tk card a" style="top:${i*146}px"><div class="done" style="position:relative;top:0;flex:none;width:56px;height:56px;transform:scale(0)">${ICON.chk(28)}</div><div><div class="rt">${k.t}</div><div class="rf">${k.f}</div></div></div>`);$('list').appendChild(d);return d;});
+const Q=notif({x:0,y:40,c:'#2a9d5c',i:'chat',h:'Ekip Grubu · Pazartesi 09:02',m:'',b:'Bu iş kimdeydi? 🙃',k:'12'});Q.style.width='940px';$('list').appendChild(Q);
+function render(t){glows(t);
+  if(scene($('s0'),t,0,5.6,.01,.35)){fadeUp($('fri'),t,.1,.5,20);reveal($('h0'),t,.25);
+    {const p=P(t,1.5,1.95);T(Q,{y:(1-eb(p))*60+Math.sin(t*2)*5,s:L(.85,1,eb(p)),r:-1.5,op:C(p*3)});}
+    items.forEach((d,i)=>{fadeUp(d,t,1.4+i*.15,.5,30);const c=d.querySelector('.done');c.style.transform=`scale(${pop(t,2.6+i*.55)})`;d.style.borderColor=t>2.6+i*.55?'rgba(43,212,127,.45)':'';});}
+  if(scene($('s1'),t,5.5,10.5,.3,.01)){reveal($('h1'),t,5.6);const ip=P(t,6.2,6.7);T($('eIcon'),{s:pop(t,6.2,.5),r:(1-eo(ip))*-90,op:C(ip*3)});fadeUp($('s1s'),t,6.7,.5,20);fadeUp($('url'),t,7.1,.5,16);}
+}
+window.render=render;window.ready=ready();autoplay(10);
+</script></body></html>

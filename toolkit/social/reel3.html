@@ -1,0 +1,54 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Reel 3</title>
+<link rel="stylesheet" href="common.css"><style>html,body,#stage{width:1080px;height:1920px}
+.seg{flex:1;height:10px;border-radius:5px;background:#2a2e37;overflow:hidden}.seg i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--g1),var(--g2))}
+.cap{position:absolute;left:0;top:0;width:940px}
+</style></head><body>
+<div id="stage">
+  <div id="glowA" class="glow" style="background:radial-gradient(circle,rgba(75,103,246,.28) 0%,rgba(75,103,246,0) 60%)"></div>
+  <div id="glowB" class="glow" style="background:radial-gradient(circle,rgba(0,214,170,.17) 0%,rgba(0,214,170,0) 60%)"></div>
+  <div class="scene" id="s0">
+    <div class="a h1" id="h0" style="left:90px;top:640px;width:920px;font-size:140px"><span class="ln"><span>Bir görev</span></span><span class="ln"><span class="grad">nasıl biter?</span></span></div>
+  </div>
+  <div class="scene" id="s1">
+    <div class="a label" id="lb" style="left:70px;top:300px">GÖREVİN YOLCULUĞU</div>
+    <div class="a" id="segs" style="left:70px;top:370px;width:940px;display:flex;gap:12px"><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div></div>
+    <div class="a card" id="task" style="left:70px;top:460px;width:940px;height:520px;padding:48px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div><div style="font-size:26px;color:var(--mut)">Satış · Görev</div><div style="font-size:44px;font-weight:700;margin-top:10px;line-height:1.2">Teklif dosyası<br>hazırlığı</div></div>
+        <div class="pill" id="st" style="height:70px;font-size:30px"><i id="dot" style="width:16px;height:16px;border-radius:50%;display:block"></i><span id="stt">Açık</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:22px;margin-top:56px"><img src="../assets/av2.png" style="width:96px;height:96px;border-radius:50%"><div><div style="font-size:24px;color:var(--mut)">Sorumlu</div><div style="font-size:34px;font-weight:600">Caner A.</div></div>
+        <div style="margin-left:auto;text-align:right"><div style="font-size:24px;color:var(--mut)">Teslim</div><div style="font-size:34px;font-weight:600">Cuma</div></div></div>
+      <div id="cmt" style="margin-top:44px;font-size:28px;color:#cfd5df;display:flex;gap:14px;align-items:center;opacity:0"><span style="width:12px;height:12px;border-radius:50%;background:var(--green);display:block"></span>Fiyat tablosu eklendi · teklif_v2.pdf</div>
+    </div>
+    <div class="a" id="caps" style="left:70px;top:1050px;width:940px;height:300px"></div>
+  </div>
+  <div class="scene" id="s2">
+    <img class="a" id="eIcon" src="../assets/logo_icon.png" style="left:440px;top:440px;width:200px;height:198px">
+    <img class="a" id="eWord" src="../assets/logo_word.png" style="left:315px;top:690px;width:450px;height:114px">
+    <div class="a h1" id="t1" style="left:0;top:930px;width:1080px;text-align:center;font-size:72px;font-weight:600;line-height:1.2">Her görevin</div>
+    <div class="a h1 grad" id="t2" style="left:0;top:1020px;width:1080px;text-align:center;font-size:72px;font-weight:600;line-height:1.2">bir sahibi var.</div>
+    <div class="a" id="url" style="left:300px;top:1260px;width:480px;height:84px;border-radius:42px;border:2px solid #2f3540;display:grid;place-items:center;font-size:34px;font-weight:600;color:#e6e9ef">www.gorew.com.tr</div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+const ST=[{n:'Açık',c:'#f0453a',h:'Açık',d:'Görev atanır. Sorumlu ve tarih belli.'},{n:'Yapılıyor',c:'#2bd47f',h:'Yapılıyor',d:'Notlar ve dosyalar görevin içinde kalır.'},{n:'Hazır',c:'#4b67f6',h:'Hazır',d:'Görevi açan kişi kontrol eder.'},{n:'Kapatıldı',c:'#e6e9ef',h:'Kapatıldı',d:'İş biter, kaydı kalır.'}];
+const caps=ST.map(s=>{const d=el(`<div class="cap a"><div class="h1" style="font-size:84px;color:${s.c==='#e6e9ef'?'#fff':s.c}">${s.h}</div><div class="sub" style="margin-top:14px;font-size:40px;color:#cfd5df">${s.d}</div></div>`);$('caps').appendChild(d);return d;});
+const T0=[3.0,4.8,6.6,8.4];
+function render(t){glows(t);
+  if(scene($('s0'),t,0,2.7,.01,.3)){reveal($('h0'),t,.15,.12);}
+  if(scene($('s1'),t,2.6,10.6)){fadeUp($('lb'),t,2.7,.4,14);fadeUp($('segs'),t,2.75,.4,14);fadeUp($('task'),t,2.8,.55,50);
+    let k=0;T0.forEach((s,i)=>{if(t>=s)k=i;});const s=ST[k];
+    $('stt').textContent=s.n;$('dot').style.background=s.c;$('st').style.background=s.c+'22';$('st').style.color=s.c==='#e6e9ef'?'#fff':s.c;
+    $('st').style.transform=`scale(${1+Math.sin(Math.PI*P(t,T0[k],T0[k]+.3))*.1})`;
+    document.querySelectorAll('.seg i').forEach((x,i)=>{x.style.width=(100*eo(P(t,T0[i],T0[i]+1.6)))+'%';});
+    caps.forEach((c,i)=>{const pin=eo(P(t,T0[i],T0[i]+.45)),po=i<3?ei(P(t,T0[i+1]-.25,T0[i+1])):0;T(c,{y:(1-pin)*40-po*30,op:pin*(1-po)});});
+    fadeUp($('cmt'),t,5.2,.4,10);
+    if(t>=8.4){$('task').style.borderColor=`rgba(43,212,127,${.5*P(t,8.4,8.8)})`;}else $('task').style.borderColor='';}
+  if(scene($('s2'),t,10.5,15.5,.3,.01)){const ip=P(t,10.6,11.1);T($('eIcon'),{s:pop(t,10.6,.5),r:(1-eo(ip))*-90,op:C(ip*3)});
+    const wp=eo(P(t,10.9,11.4));$('eWord').style.clipPath=`inset(0 ${(1-wp)*100}% 0 0)`;T($('eWord'),{op:wp});
+    fadeUp($('t1'),t,11.3,.5,30);fadeUp($('t2'),t,11.6,.5,30);fadeUp($('url'),t,12.2,.5,16);}
+}
+window.render=render;window.ready=ready();autoplay(15);
+</script></body></html>
