@@ -86,7 +86,8 @@ def render(style, seconds):
             vel = 1.0 if s16 % 4 == 0 else 0.7
             if b >= intro_bars or s16 % 2 == 0: add(pl, x * vel, t0 + s16 * beat/4 * SR)
         # drums
-        if b >= intro_bars:
+        brk = seconds > 40 and (b % 16) in (14, 15)
+        if b >= intro_bars and not brk:
             for q in range(4):
                 tq = t0 + q * beat * SR
                 # kick

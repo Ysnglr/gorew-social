@@ -1,0 +1,169 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Gorew YouTube Tanıtım</title>
+<link rel="stylesheet" href="common.css"><style>
+html,body,#stage{width:1920px;height:1080px}
+.h1{line-height:1.04}
+.bul{display:flex;align-items:center;gap:18px;font-size:32px;color:#d6dbe4;margin-top:22px}
+.bul i{width:40px;height:40px;border-radius:50%;background:rgba(43,212,127,.16);display:grid;place-items:center;flex:none}
+.doc{width:500px;height:300px;padding:40px;position:absolute}
+.doc .t{font-size:32px;font-weight:600;margin-top:26px}
+.doc .s{font-size:24px;color:var(--mut);margin-top:8px}
+.ext{height:84px;padding:0 34px 0 16px;border-radius:42px;background:var(--card);border:2px solid var(--line);display:inline-flex;align-items:center;gap:16px;font-size:30px;font-weight:600;position:relative}
+.stat .n{font-family:'Inter Display';font-weight:700;font-size:70px;letter-spacing:-.03em;line-height:1}
+.stat .l{font-size:23px;color:var(--mut);margin-top:8px;line-height:1.35}
+</style></head><body>
+<div id="stage">
+  <div id="glowA" class="glow" style="background:radial-gradient(circle,rgba(75,103,246,.26) 0%,rgba(75,103,246,0) 60%)"></div>
+  <div id="glowB" class="glow" style="background:radial-gradient(circle,rgba(0,214,170,.15) 0%,rgba(0,214,170,0) 60%)"></div>
+
+  <div class="scene" id="A">
+    <div class="a h1" id="Ah" style="left:140px;top:300px;width:900px;font-size:100px"><span class="ln"><span>Şirketinizde şu an</span></span><span class="ln"><span>kaç iş, kimde</span></span><span class="ln"><span class="grad">bekliyor?</span></span></div>
+    <div class="a sub" id="As" style="left:140px;top:700px;font-size:38px">Bilmiyorsanız, yalnız değilsiniz.</div>
+    <div id="nts"></div>
+  </div>
+
+  <div class="scene" id="B">
+    <div class="a" id="ring" style="left:810px;top:390px;width:300px;height:300px;border-radius:50%;border:3px solid #00d0c8"></div>
+    <img class="a" id="lgIcon" src="../assets/logo_icon.png" style="left:850px;top:430px;width:220px;height:219px">
+    <div class="a" id="lgW" style="left:813px;top:470px;width:562px;height:142px;overflow:hidden"><img src="../assets/logo_word.png" style="height:142px;width:562px"></div>
+    <div class="a sub" id="Bs" style="left:0;top:720px;width:1920px;text-align:center;font-size:42px;color:#cfd5df">Görevler, onaylar, rutinler ve belgeler. Tek yerde.</div>
+  </div>
+
+  <div class="scene" id="C">
+    <div class="a" style="left:140px;top:170px;width:820px">
+      <div class="label a" id="Cl" style="position:relative">GÖREV YÖNETİMİ</div>
+      <div class="h1" id="Ch" style="font-size:96px;margin-top:28px"><span class="ln"><span>Her görevin</span></span><span class="ln"><span class="grad">bir sahibi var.</span></span></div>
+      <div id="Cb" style="margin-top:30px"></div>
+    </div>
+    <div class="a" id="Cchips" style="left:140px;top:860px;display:flex;gap:16px">
+      <div class="chip"><i style="background:var(--red)"></i>Açık</div><div class="chip"><i style="background:var(--green)"></i>Yapılıyor</div><div class="chip"><i style="background:var(--blue)"></i>Hazır</div><div class="chip"><i style="background:#cfd5df"></i>Kapatıldı</div>
+    </div>
+    <img class="a shadow" id="Cmon" src="../assets/monitor.png" style="left:1000px;top:150px;width:820px;height:802px">
+    <img class="a shadow" id="Cph" src="../assets/ph_detail.png" style="left:1060px;top:60px;width:776px;height:963px">
+  </div>
+
+  <div class="scene" id="D">
+    <div class="a frame" id="Dph" style="left:170px;top:20px;transform-origin:0 0"><img src="../assets/s_onaylar.png"></div>
+    <div class="a" style="left:820px;top:90px;width:980px">
+      <div class="label a" id="Dl" style="position:relative">ONAY SÜREÇLERİ</div>
+      <div class="h1" id="Dh" style="font-size:92px;margin-top:26px"><span class="ln"><span>Onaysız harcama</span></span><span class="ln"><span class="grad">yapılmaz.</span></span></div>
+      <div class="sub a" id="Ds" style="position:relative;margin-top:20px;font-size:30px">Sıra kimdeyse talep ondadır. Onaylanan içerik kilitlenir, kaydı tutulur.</div>
+    </div>
+    <div id="Dchain" class="a" style="left:820px;top:560px"></div>
+  </div>
+
+  <div class="scene" id="E">
+    <div class="a" style="left:140px;top:110px;width:900px">
+      <div class="label a" id="El" style="position:relative">RUTİNLER &amp; UYARILAR</div>
+      <div class="h1" id="Eh" style="font-size:96px;margin-top:26px"><span class="ln"><span>Geciken iş</span></span><span class="ln"><span class="grad">size düşer.</span></span></div>
+      <div class="sub a" id="Es" style="position:relative;margin-top:20px;font-size:30px">Saatlikten yıllığa tekrar eden işler kendiliğinden açılır.</div>
+    </div>
+    <div id="Erows" class="a" style="left:120px;top:540px"></div>
+    <img class="a shadow" id="Eph" src="../assets/ph_home.png" style="left:1080px;top:60px;width:776px;height:963px">
+    <div class="a card" id="Etoast" style="left:1160px;top:110px;width:660px;height:136px;background:#22252d;border:1px solid #3a2a2c;display:flex;align-items:center;gap:22px;padding:0 28px;box-shadow:0 30px 60px rgba(0,0,0,.6)">
+      <div id="EtI" style="width:72px;height:72px;border-radius:20px;background:rgba(240,69,58,.18);display:grid;place-items:center;flex:none"></div>
+      <div><div style="font-size:28px;font-weight:700">Yöneticiye uyarı gönderildi</div><div style="font-size:23px;color:var(--mut);margin-top:4px">Ruhsat yenileme · 2 gün gecikti</div></div>
+    </div>
+  </div>
+
+  <div class="scene" id="F">
+    <div class="a" style="left:0;top:90px;width:1920px;text-align:center">
+      <div class="label a" id="Fl" style="position:relative;justify-content:center">BELGELER &amp; DIŞ PAYDAŞLAR</div>
+      <div class="h1" id="Fh" style="font-size:84px;margin-top:24px"><span class="ln"><span>Sözleşmeler bitmeden <span class="grad">haber verir.</span></span></span></div>
+    </div>
+    <div id="docs"></div>
+    <div class="a sub" id="Fs" style="left:0;top:770px;width:1920px;text-align:center;font-size:30px">Mali müşavir, avukat ya da ajans: dış kullanıcılar sadece kendilerine açılan işleri görür.</div>
+    <div id="exts" style="position:absolute;left:0;top:860px;width:1920px;display:flex;justify-content:center;gap:24px"></div>
+  </div>
+
+  <div class="scene" id="G">
+    <div class="a" style="left:0;top:60px;width:1920px;text-align:center">
+      <div class="h1" id="Gh" style="font-size:80px"><span class="ln"><span>Ofiste, sahada, <span class="grad">her yerde.</span></span></span></div>
+      <div class="sub a" id="Gs" style="position:relative;margin-top:12px;font-size:28px">Web · iOS · Android · Masaüstü</div>
+    </div>
+    <img class="a shadow" id="Gmon" src="../assets/monitor.png" style="left:480px;top:240px;width:760px;height:743px">
+    <img class="a shadow" id="Gph" src="../assets/ph_onaylar.png" style="left:1080px;top:370px;width:480px;height:595px">
+    <div class="a stat" id="g1" style="left:130px;top:330px"><div class="n" data-v="90000">0</div><div class="l">görev yönetildi</div></div>
+    <div class="a stat" id="g2" style="left:130px;top:560px"><div class="n" data-v="23000">0</div><div class="l">onay talebi</div></div>
+    <div class="a stat" id="g3" style="left:1620px;top:330px"><div class="n">%99,9</div><div class="l">erişilebilirlik</div></div>
+    <div class="a stat" id="g4" style="left:1620px;top:560px"><div class="n">KVKK</div><div class="l">uyumlu, 256-bit<br>şifreleme</div></div>
+    <div class="a sub" id="Gc" style="left:0;top:1000px;width:1920px;text-align:center;font-size:24px">AWS, Azure ve Google Cloud üzerinde aktif-aktif yedekli altyapı</div>
+  </div>
+
+  <div class="scene" id="H">
+    <div class="a h1" id="Hh" style="left:0;top:360px;width:1920px;text-align:center;font-size:110px"><span class="ln"><span>Siz ofiste olmasanız da</span></span><span class="ln"><span class="grad">işler yürür.</span></span></div>
+    <div class="a sub" id="Hs" style="left:0;top:660px;width:1920px;text-align:center;font-size:36px">Herkes ne yapacağını bilir. Siz de her şeyi görürsünüz.</div>
+  </div>
+
+  <div class="scene" id="I">
+    <img class="a" id="eIcon" src="../assets/logo_icon.png" style="left:640px;top:280px;width:170px;height:169px">
+    <img class="a" id="eWord" src="../assets/logo_word.png" style="left:846px;top:310px;width:434px;height:110px">
+    <div class="a" id="tags" style="left:0;top:540px;width:1920px;display:flex;justify-content:center;gap:34px;font-family:'Inter Display';font-weight:600;font-size:58px;letter-spacing:-.02em">
+      <span>Tek platform.</span><span class="grad">Net sorumluluk.</span><span>Ölçülebilir süreç.</span>
+    </div>
+    <div class="a sub" id="Is" style="left:0;top:680px;width:1920px;text-align:center;font-size:30px">Ekibinizle tanıştıralım:</div>
+    <div class="a" id="url" style="left:710px;top:750px;width:500px;height:90px;border-radius:45px;background:linear-gradient(90deg,var(--g1),var(--g2));display:grid;place-items:center;font-size:36px;font-weight:700;color:#04110c">www.gorew.com.tr</div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+/* A */
+const NT=[{x:1120,y:110,r:-3,t:.5,c:'#2a9d5c',i:'chat',h:'Ekip Grubu',m:'şimdi',b:'Bu iş kimdeydi?',k:'48'},
+ {x:1240,y:280,r:2.5,t:.85,c:'#3d6fd6',i:'mail',h:'E-posta',m:'2 dk',b:'Re: Re: Fw: Harcama onayı?',k:''},
+ {x:1060,y:450,r:1.8,t:1.2,c:'#7a5af0',i:'file',h:'Satış',m:'5 dk',b:'Teklifin son hali hangisi?',k:''},
+ {x:1230,y:620,r:-2.2,t:1.55,c:'#3d6fd6',i:'mail',h:'Muhasebe',m:'1 sa',b:'Fatura onayı hâlâ bekliyor',k:'132'},
+ {x:1090,y:790,r:3,t:1.9,c:'#d0453b',i:'cal',h:'Takvim',m:'gecikti',b:'Ruhsat yenileme gecikti',k:''}];
+NT.forEach(n=>{n.el=notif(n);$('nts').appendChild(n.el);});
+/* C bullets */
+const CB=['Kanban panolar ve çalışma alanları','Sorumlu, teslim tarihi ve öncelik','Yorumlar ve dosyalar görevin içinde'];
+const cb=CB.map(b=>{const d=el(`<div class="bul a" style="position:relative"><i>${ICON.chk(20).replace('#fff','#2bd47f')}</i>${b}</div>`);$('Cb').appendChild(d);return d;});
+const chipsEls=[...document.querySelectorAll('#Cchips .chip')];
+/* D */
+const ch=chainCard('Satın alma · MacBook Pro','Planlama · 14 Nisan',STEPS);$('Dchain').appendChild(ch.root);
+/* E */
+$('EtI').innerHTML=ICON.bellRed;
+const rr=routineRows([{t:'Sunucu yedek kontrolü',f:'Her gün · 15:00'},{t:'Aylık KDV beyannamesi',f:'Her ay · 26\'sı'},{t:'Ruhsat yenileme',f:'Yıllık · 14 Ekim',late:1}]);$('Erows').appendChild(rr.root);
+/* F */
+const DOCS=[{t:'İşyeri ruhsatı',s:'Bitiş: 30 gün sonra',c:'#f5a524',b:'30 gün'},{t:'Kira sözleşmesi',s:'Bitiş: 12 gün sonra',c:'#f0453a',b:'12 gün'},{t:'Tedarikçi sözleşmesi',s:'Geçerli · 2027',c:'#2bd47f',b:'Güncel'}];
+const docs=DOCS.map((d,i)=>{const e=el(`<div class="a card doc" style="left:${170+i*540}px;top:330px"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:70px;height:70px;border-radius:20px;background:rgba(75,103,246,.16);display:grid;place-items:center">${ICON.file.replace('<svg ','<svg width="36" height="36" ').replace('#fff','#7d93ff')}</div><div class="pill" style="background:${d.c}22;color:${d.c}">${d.b}</div></div><div class="t">${d.t}</div><div class="s">${d.s}</div></div>`);$('docs').appendChild(e);return e;});
+const EX=['Mali müşavir','Avukat','Ajans'];
+const exts=EX.map((x,i)=>{const e=el(`<div class="ext"><img src="../assets/av${[4,3,1][i]}.png" style="width:52px;height:52px;border-radius:50%">${x}</div>`);$('exts').appendChild(e);return e;});
+const fmt=v=>Math.round(v).toLocaleString('tr-TR');
+
+function render(t){
+  glows(t);
+  if(scene($('A'),t,0,6.3,.01,.45)){reveal($('Ah'),t,.15,.12);fadeUp($('As'),t,3.4,.6,20);
+    const suck=ei(P(t,5.7,6.25));
+    NT.forEach((n,i)=>{const p=P(t,n.t,n.t+.45),e=eb(p);const cx=n.x+310,cy=n.y+58;
+      T(n.el,{x:Math.sin(t*1.6+i)*5+(960-cx)*suck,y:(1-e)*50+Math.cos(t*1.2+i)*6+(540-cy)*suck,s:L(.82,1,e)*(1-suck*.85),r:n.r*(1-suck)+suck*40*(i%2?1:-1),op:C(p*3)*(1-P(t,5.95,6.2))});});}
+  if(scene($('B'),t,6.15,9.5,.15,.35)){const pin=pop(t,6.2,.55);const mv=eio(P(t,7.0,7.6));
+    T($('lgIcon'),{x:-297*mv,s:pin*L(1,.92,mv),r:(1-C(pin))*-120,op:C(P(t,6.2,6.45))});
+    const rp=P(t,6.5,7.4);T($('ring'),{x:-297*mv,s:1+eo(rp)*1.6,op:rp>0?(1-rp)*.7:0});
+    const wp=eo(P(t,7.45,8.0));$('lgW').style.clipPath=`inset(0 ${(1-wp)*100}% 0 0)`;T($('lgW'),{x:L(-40,0,wp),op:wp});
+    fadeUp($('Bs'),t,7.9,.5,20);}
+  if(scene($('C'),t,9.4,21.1)){fadeUp($('Cl'),t,9.5,.45,16);reveal($('Ch'),t,9.6);cb.forEach((b,i)=>fadeUp(b,t,10.6+i*.45,.5,20));
+    const m=eo(P(t,9.6,10.6)),mo=ei(P(t,14.6,15.1));T($('Cmon'),{y:(1-m)*120-mo*40+Math.sin(t*.9)*6,s:L(.94,1,m),op:m*(1-mo)});
+    const pi=eo(P(t,15.0,15.8));T($('Cph'),{x:(1-pi)*140,y:(1-pi)*80+Math.sin(t*1.1)*9,r:(1-pi)*5,op:pi});
+    fadeUp($('Cchips'),t,15.3,.5,24);const steps=[15.9,16.9,17.9,18.9];let k=-1;steps.forEach((s,i)=>{if(t>=s)k=i;});
+    chipsEls.forEach((c,i)=>{const col=['#f0453a','#2bd47f','#4b67f6','#e6e9ef'][i];const on=i===k;const pa=P(t,steps[i],steps[i]+.25);c.style.transform=`scale(${on?1+Math.sin(Math.PI*pa)*.08:1})`;
+      if(i<=k){c.style.color='#fff';c.style.borderColor=on?col:'#3a3f4a';c.style.background=on?col+'26':'#1b1f27';}else{c.style.color='#7c8494';c.style.borderColor='#2c313b';c.style.background='#14171d';}});}
+  if(scene($('D'),t,21.0,33.1)){const pi=eo(P(t,21.1,22.0));T($('Dph'),{y:(1-pi)*200+Math.sin(t*1.1)*8,r:(1-pi)*-4,op:pi});$('Dph').style.transform+=' scale(.94)';
+    fadeUp($('Dl'),t,21.3,.45,16);reveal($('Dh'),t,21.4);fadeUp($('Ds'),t,22.1,.5,20);fadeUp(ch.root,t,22.6,.6,40);ch.update(t,[24.0,25.4,26.8],27.6,28.4);}
+  if(scene($('E'),t,33.0,44.1)){fadeUp($('El'),t,33.1,.45,16);reveal($('Eh'),t,33.2);fadeUp($('Es'),t,33.9,.5,20);
+    const pi=eo(P(t,33.2,34.2));T($('Eph'),{x:(1-pi)*140,y:(1-pi)*120+Math.sin(t*1.1)*9,r:(1-pi)*5,op:pi});
+    rr.update(t,34.6,[36.2,37.2,38.6]);const tp=P(t,39.3,39.9);T($('Etoast'),{y:(1-eo(tp))*-60,s:L(.9,1,eb(tp)),op:C(tp*2)});}
+  if(scene($('F'),t,44.0,53.1)){fadeUp($('Fl'),t,44.1,.45,16);reveal($('Fh'),t,44.2);
+    docs.forEach((d,i)=>{fadeUp(d,t,45.0+i*.25,.6,40);const pl=d.querySelector('.pill');pl.style.transform=`scale(${pop(t,46.4+i*.5)})`;});
+    fadeUp($('Fs'),t,48.6,.6,20);exts.forEach((e,i)=>fadeUp(e,t,49.4+i*.25,.5,24));}
+  if(scene($('G'),t,53.0,62.1)){reveal($('Gh'),t,53.1);fadeUp($('Gs'),t,53.6,.5,14);const m=eo(P(t,53.2,54.1));T($('Gmon'),{y:(1-m)*120,s:L(.92,1,m),op:m});
+    const ph=eo(P(t,53.6,54.4));T($('Gph'),{x:(1-ph)*100,y:(1-ph)*80+Math.sin(t*1.3)*8,r:(1-ph)*5,op:ph});
+    ['g1','g2','g3','g4'].forEach((id,i)=>fadeUp($(id),t,54.0+i*.2,.55,24));
+    document.querySelectorAll('#G .n[data-v]').forEach((n,i)=>{n.textContent=fmt(+n.dataset.v*eo(P(t,54.0+i*.2,55.8)))+'+';});
+    fadeUp($('Gc'),t,56.0,.6,14);}
+  if(scene($('H'),t,62.0,68.1,.4,.4)){reveal($('Hh'),t,62.2,.25,.9);fadeUp($('Hs'),t,63.6,.7,20);}
+  if(scene($('I'),t,68.0,76,.4,.01)){const ip=P(t,68.1,68.7);T($('eIcon'),{s:pop(t,68.1,.6),r:(1-eo(ip))*-90,op:C(ip*3)});
+    const wp=eo(P(t,68.4,69.0));$('eWord').style.clipPath=`inset(0 ${(1-wp)*100}% 0 0)`;T($('eWord'),{x:(1-wp)*-30,op:wp});
+    [...$('tags').children].forEach((s,i)=>{const p=eo(P(t,69.0+i*.4,69.6+i*.4));s.style.display='inline-block';s.style.transform=`translateY(${(1-p)*30}px)`;s.style.opacity=p;});
+    fadeUp($('Is'),t,70.6,.5,14);fadeUp($('url'),t,70.9,.6,20);}
+}
+window.render=render;window.ready=ready();autoplay(75);
+</script></body></html>
