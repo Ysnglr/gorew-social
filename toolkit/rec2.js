@@ -3,7 +3,7 @@ const {chromium}=require('/opt/node-tools/node_modules/playwright-core');
 const {spawn}=require('child_process');const path=require('path');
 (async()=>{
  const [file,W,H,secs,out,...snaps]=process.argv.slice(2);
- const b=await chromium.launch({executablePath:'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'});
+ const b=await chromium.launch({executablePath:process.env.CHROME||['/opt/pw-browsers/chromium','/opt/pw-browsers/chromium-1243/chrome-linux64/chrome','/opt/pw-browsers/chromium-1194/chrome-linux/chrome'].find(p=>require('fs').existsSync(p))});
  const SS=+(process.env.SS||2);const pg=await b.newPage({viewport:{width:+W,height:+H},deviceScaleFactor:SS});
  pg.on('pageerror',e=>console.log('ERR',e.message));pg.on('console',m=>{if(m.type()==='error')console.log('CONSOLE',m.text())});
  await pg.goto('file://'+path.resolve(file));await pg.evaluate(()=>window.ready);

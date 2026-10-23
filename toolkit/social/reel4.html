@@ -1,0 +1,61 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Reel 4</title>
+<link rel="stylesheet" href="common.css"><style>html,body,#stage{width:1080px;height:1920px}
+.tc{position:absolute;left:0;width:940px;height:150px;display:flex;align-items:center;gap:26px;padding:0 34px}
+.tc img{width:84px;height:84px;border-radius:50%;flex:none}
+.tc .tt{font-size:34px;font-weight:600}.tc .tf{font-size:25px;color:var(--mut);margin-top:6px}
+.tc .pill{margin-left:auto;height:56px;font-size:24px;flex:none}
+.tc .pill i{width:14px;height:14px;border-radius:50%;display:block}
+</style></head><body>
+<div id="stage">
+  <div id="glowA" class="glow" style="background:radial-gradient(circle,rgba(75,103,246,.28) 0%,rgba(75,103,246,0) 60%)"></div>
+  <div id="glowB" class="glow" style="background:radial-gradient(circle,rgba(0,214,170,.17) 0%,rgba(0,214,170,0) 60%)"></div>
+  <div class="scene" id="s0">
+    <div class="a label" id="lb0" style="left:90px;top:440px">BÜYÜYEN ŞİRKETLER</div>
+    <div class="a h1" id="h0" style="left:90px;top:520px;width:920px;font-size:124px"><span class="ln"><span>5 kişiyken</span></span><span class="ln"><span>WhatsApp grubu</span></span><span class="ln"><span class="grad">yetiyordu.</span></span></div>
+    <div class="a sub" id="s0s" style="left:90px;top:1000px;font-size:46px;color:#cfd5df">Peki 30 kişi olunca?</div>
+  </div>
+  <div class="scene" id="s1">
+    <div class="a h1" id="h1" style="left:90px;top:300px;width:920px;font-size:104px"><span class="ln"><span>30 kişi olunca…</span></span></div>
+    <div id="b1"></div>
+  </div>
+  <div class="scene" id="s2">
+    <div class="a h1" id="h2" style="left:70px;top:300px;width:940px;font-size:100px"><span class="ln"><span>Mesajlar akıp gider.</span></span><span class="ln"><span class="grad">Görevler kalır.</span></span></div>
+    <div id="tasks" class="a" style="left:70px;top:660px;width:940px;height:540px"></div>
+    <div class="a sub" id="s2s" style="left:70px;top:1240px;width:940px;font-size:40px;color:#cfd5df">Sahibi, tarihi ve durumu belli.</div>
+  </div>
+  <div class="scene" id="s3">
+    <div class="a h1" id="h3" style="left:70px;top:300px;width:940px;font-size:96px"><span class="ln"><span>Siz de bütün resmi</span></span><span class="ln"><span class="grad">tek ekrandan görün.</span></span></div>
+    <img class="a shadow" id="mon" src="../assets/monitor.png" style="left:90px;top:600px;width:900px;height:880px">
+  </div>
+  <div class="scene" id="s4">
+    <img class="a" id="eIcon" src="../assets/logo_icon.png" style="left:440px;top:440px;width:200px;height:198px">
+    <img class="a" id="eWord" src="../assets/logo_word.png" style="left:315px;top:690px;width:450px;height:114px">
+    <div class="a h1" id="t1" style="left:0;top:930px;width:1080px;text-align:center;font-size:72px;font-weight:600;line-height:1.2">Şirket büyürken</div>
+    <div class="a h1 grad" id="t2" style="left:0;top:1020px;width:1080px;text-align:center;font-size:72px;font-weight:600;line-height:1.2">düzen sizde kalsın.</div>
+    <div class="a" id="url" style="left:300px;top:1260px;width:480px;height:84px;border-radius:42px;border:2px solid #2f3540;display:grid;place-items:center;font-size:34px;font-weight:600;color:#e6e9ef">www.gorew.com.tr</div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+const B=[{x:70,y:560,r:-2,t:3.5,m:'09:02',b:'Bu iş kimdeydi?',k:''},
+ {x:390,y:720,r:2,t:3.85,m:'10:15',b:'Teklif hangi mailde?',k:''},
+ {x:90,y:880,r:-1.5,t:4.2,m:'11:40',b:'Onay verildi mi?',k:''},
+ {x:370,y:1040,r:1.5,t:4.55,m:'14:22',b:'Dosyanın son hali?',k:''},
+ {x:110,y:1200,r:-2.5,t:4.9,m:'16:05',b:'Bunu kim takip ediyor?',k:'312'}];
+B.forEach(n=>{n.c='#2a9d5c';n.i='chat';n.h='Şirket Grubu';n.el=notif(n);$('b1').appendChild(n.el);});
+const TK=[{t:'Bayi sözleşmesi revizyonu',f:'Caner A. · Teslim Cuma',img:'av2',c:'#2bd47f',s:'Yapılıyor'},
+ {t:'Fuar stand ödemesi',f:'Finans · Sıra sizde',img:'av3',c:'#f5a524',s:'Onay bekliyor'},
+ {t:'Aylık stok sayımı',f:'Rutin · Her ayın 1\'i',img:'av1',c:'#4b67f6',s:'Tamamlandı'}];
+const tk=TK.map((k,i)=>{const d=el(`<div class="tc card a" style="top:${i*185}px"><img src="../assets/${k.img}.png"><div><div class="tt">${k.t}</div><div class="tf">${k.f}</div></div><div class="pill" style="background:${k.c}22;color:${k.c}"><i style="background:${k.c}"></i>${k.s}</div></div>`);$('tasks').appendChild(d);return d;});
+function render(t){glows(t);
+  if(scene($('s0'),t,0,3.0,.01,.3)){fadeUp($('lb0'),t,.05,.4,14);reveal($('h0'),t,.1,.1);fadeUp($('s0s'),t,1.4,.5,20);}
+  if(scene($('s1'),t,2.9,7.6)){reveal($('h1'),t,3.0);
+    B.forEach((n,i)=>{const p=P(t,n.t,n.t+.4);const shake=t>6.2?Math.sin(t*40+i)*3*P(t,6.2,6.5):0;T(n.el,{x:shake,y:(1-eb(p))*50+Math.sin(t*1.5+i)*5,s:L(.85,1,eb(p)),r:n.r,op:C(p*3)});});}
+  if(scene($('s2'),t,7.5,11.6)){reveal($('h2'),t,7.6);tk.forEach((d,i)=>fadeUp(d,t,8.4+i*.25,.55,40));fadeUp($('s2s'),t,9.4,.5,20);}
+  if(scene($('s3'),t,11.5,15.1)){reveal($('h3'),t,11.6);const p=eo(P(t,12.0,12.8));T($('mon'),{y:(1-p)*80,s:L(.94,1,p)+P(t,12.8,15)*.03,op:p});}
+  if(scene($('s4'),t,15.0,18.5,.3,.01)){const ip=P(t,15.1,15.6);T($('eIcon'),{s:pop(t,15.1,.5),r:(1-eo(ip))*-90,op:C(ip*3)});
+    const wp=eo(P(t,15.4,15.9));$('eWord').style.clipPath=`inset(0 ${(1-wp)*100}% 0 0)`;T($('eWord'),{op:wp});
+    fadeUp($('t1'),t,15.8,.5,30);fadeUp($('t2'),t,16.1,.5,30);fadeUp($('url'),t,16.6,.5,16);}
+}
+window.render=render;window.ready=ready();autoplay(18.5);
+</script></body></html>
