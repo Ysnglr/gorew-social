@@ -1,0 +1,34 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Story 4</title>
+<link rel="stylesheet" href="common.css"><style>html,body,#stage{width:1080px;height:1920px}
+.ar{position:absolute;left:0;width:940px;height:140px;display:flex;align-items:center;gap:24px;padding:0 34px}
+.ar img{width:80px;height:80px;border-radius:50%;flex:none}
+.ar .tt{font-size:33px;font-weight:600}.ar .tf{font-size:24px;color:var(--mut);margin-top:6px}
+.ar .st{margin-left:auto;position:relative;width:250px;height:56px;flex:none}
+.ar .pill{position:absolute;right:0;top:0;height:56px;font-size:24px}
+</style></head><body>
+<div id="stage">
+  <div id="glowA" class="glow" style="background:radial-gradient(circle,rgba(75,103,246,.3) 0%,rgba(75,103,246,0) 60%)"></div>
+  <div id="glowB" class="glow" style="background:radial-gradient(circle,rgba(0,214,170,.2) 0%,rgba(0,214,170,0) 60%)"></div>
+  <div class="scene" id="s0">
+    <div class="a pill" id="fri" style="left:90px;top:330px;background:rgba(75,103,246,.16);color:#9fb0ff;font-size:30px;height:68px">Cuma · Hafta kapanışı</div>
+    <div class="a h1" id="h0" style="left:90px;top:440px;width:920px;font-size:104px"><span class="ln"><span>Masanızda</span></span><span class="ln"><span>bekleyen</span></span><span class="ln"><span class="grad">onay kaldı mı?</span></span></div>
+    <div id="list" class="a" style="left:70px;top:900px;width:940px;height:500px"></div>
+  </div>
+  <div class="scene" id="s1">
+    <div class="a h1" id="h1" style="left:0;top:480px;width:1080px;text-align:center;font-size:96px"><span class="ln"><span>Hafta sonuna</span></span><span class="ln"><span class="grad">bekleyen onay</span></span><span class="ln"><span class="grad">bırakmayın.</span></span></div>
+    <img class="a" id="eIcon" src="../assets/logo_icon.png" style="left:450px;top:880px;width:180px;height:179px">
+    <div class="a sub" id="s1s" style="left:0;top:1110px;width:1080px;text-align:center;font-size:40px;color:#cfd5df">Onaylar cebinizde: web, iOS ve Android.</div>
+    <div class="a" id="url" style="left:300px;top:1240px;width:480px;height:84px;border-radius:42px;border:2px solid #2f3540;display:grid;place-items:center;font-size:34px;font-weight:600;color:#e6e9ef">www.gorew.com.tr</div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+const AR=[{t:'Fuar stand ödemesi',f:'Pazarlama · Sıra sizde',img:'av1'},{t:'Yıllık izin · 5 gün',f:'Satış · Sıra sizde',img:'av2'},{t:'Yazılım lisansı yenileme',f:'Bilgi işlem · Sıra sizde',img:'av3'}];
+const rows=AR.map((a,i)=>{const d=el(`<div class="ar card a" style="top:${i*165}px"><img src="../assets/${a.img}.png"><div><div class="tt">${a.t}</div><div class="tf">${a.f}</div></div><div class="st"><div class="pill pe" style="background:rgba(245,165,36,.14);color:var(--amber)">${ICON.clock}Onay bekliyor</div><div class="pill okk" style="background:rgba(43,212,127,.15);color:var(--green);opacity:0">${ICON.thumb}Onaylandı</div></div></div>`);$('list').appendChild(d);return {d,pe:d.querySelector('.pe'),ok:d.querySelector('.okk'),tf:d.querySelector('.tf'),f0:a.f};});
+function render(t){glows(t);
+  if(scene($('s0'),t,0,5.2,.01,.35)){fadeUp($('fri'),t,.1,.5,20);reveal($('h0'),t,.25);
+    rows.forEach((r,i)=>{fadeUp(r.d,t,1.3+i*.18,.5,30);const s=2.9+i*.45;const p=P(t,s,s+.3);r.pe.style.opacity=1-p;r.ok.style.opacity=p;r.ok.style.transform=`scale(${.9+eb(p)*.1})`;r.d.style.borderColor=p>0?'rgba(43,212,127,.45)':'';r.tf.textContent=p>.5?r.f0.replace('Sıra sizde','Onayladınız'):r.f0;});}
+  if(scene($('s1'),t,5.1,9,.3,.01)){reveal($('h1'),t,5.2);const ip=P(t,5.9,6.4);T($('eIcon'),{s:pop(t,5.9,.5),r:(1-eo(ip))*-90,op:C(ip*3)});fadeUp($('s1s'),t,6.4,.5,20);fadeUp($('url'),t,6.8,.5,16);}
+}
+window.render=render;window.ready=ready();autoplay(9);
+</script></body></html>

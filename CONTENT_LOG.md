@@ -14,5 +14,10 @@
 | 2026-10-28 10:00 | Carousel (6) | Hafızaya emanet edilmemesi gereken 4 tarih (ruhsat, sözleşme bitişi, poliçe, bakım/beyan) | 2026-w44/gorew_c4_* |
 | 2026-10-29 18:00 | Reel 14 sn | Ofis mizahı: teklif_son_v2_FINAL.pdf, hangisi onaylanan? → belge onayın içinde | 2026-w44/gorew_reel5.mp4 |
 | 2026-10-30 10:00 | Story 10 sn | Toplantıda "durum ne?" diye sormayın, durum ekranda | 2026-w44/gorew_story3.mp4 |
+| 2026-11-02 10:00 | Carousel (6) | Dış ekibiniz de aynı akışta mı? Mali müşavir, avukat, ajans + KVKK/256-bit | 2026-w45/gorew_c5_* |
+| 2026-11-03 18:00 | Reel 19 sn | Birimler arası “top sende”: “Satın almaya ilettik / Bize gelmedi” → top kimdeyse görünür, gecikme yöneticiye düşer | 2026-w45/gorew_reel6.mp4 |
+| 2026-11-04 10:00 | Carousel (6) | Her ay tekrarlanan işler kimin aklında? Sektöre göre rutinler (üretim, perakende, hizmet/ajans, saha) | 2026-w45/gorew_c6_* |
+| 2026-11-05 18:00 | Reel 14 sn | Ofis mizahı: toplantı bitti, “Bunu sonra konuşalım” → toplantı görevle biter | 2026-w45/gorew_reel7.mp4 |
+| 2026-11-06 10:00 | Story 9 sn | Cuma kapanışı: masanızda bekleyen onay kaldı mı? | 2026-w45/gorew_story4.mp4 |
 
-Henüz işlenmemiş konular (öneri havuzu — hepsi patron/şirket sahibi gözünden anlatılır): onaysız harcama riski ve satın alma kontrolü · birimler arası "top sende" sorunu · yöneticiye düşen gecikme uyarıları · masraf takibi · süre takibi · dış kullanıcılar (mali müşavir, avukat, ajans) · kullanıcı rolleri · Kanban panolar ve çalışma alanları · KVKK ve güvenlik / yedekleme · mobil + web kullanım · müşteri referansları (Baumit, Alb Menkul Değerler) · izin / işe alım onayları · rutin örnekleri (sektöre göre) · ofis mizahı (toplantı vb.; "son hali_v3_final" işlendi) · fiyat/demonun duyurusu
+Henüz işlenmemiş konular (öneri havuzu — hepsi patron/şirket sahibi gözünden anlatılır): onaysız harcama riski ve satın alma kontrolü · masraf takibi · süre takibi · kullanıcı rolleri · Kanban panolar ve çalışma alanları · KVKK ve güvenlik / yedekleme · mobil + web kullanım · müşteri referansları (Baumit, Alb Menkul Değerler) · izin / işe alım onayları · ofis mizahı ("son hali_v3_final" ve toplantı işlendi; başka örnek: Pazartesi sabahı, "acil" etiketli her şey) · fiyat/demonun duyurusu

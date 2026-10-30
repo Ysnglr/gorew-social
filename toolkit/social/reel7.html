@@ -1,0 +1,53 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Reel 7</title>
+<link rel="stylesheet" href="common.css"><style>html,body,#stage{width:1080px;height:1920px}
+.tc{position:absolute;left:0;width:940px;height:150px;display:flex;align-items:center;gap:26px;padding:0 34px}
+.tc img{width:84px;height:84px;border-radius:50%;flex:none}
+.tc .tt{font-size:34px;font-weight:600}.tc .tf{font-size:25px;color:var(--mut);margin-top:6px}
+.tc .pill{margin-left:auto;height:56px;font-size:24px;flex:none}
+.tc .pill i{width:14px;height:14px;border-radius:50%;display:block}
+.mr{display:flex;align-items:center;gap:20px;font-size:36px;margin-top:26px}
+.mr span{color:var(--mut);width:200px}.mr b{font-weight:600;color:#5d6574}
+</style></head><body>
+<div id="stage">
+  <div id="glowA" class="glow" style="background:radial-gradient(circle,rgba(75,103,246,.28) 0%,rgba(75,103,246,0) 60%)"></div>
+  <div id="glowB" class="glow" style="background:radial-gradient(circle,rgba(0,214,170,.17) 0%,rgba(0,214,170,0) 60%)"></div>
+  <div class="scene" id="s0">
+    <div class="a pill" id="pl" style="left:70px;top:300px;background:rgba(75,103,246,.16);color:#9fb0ff;font-size:30px;height:68px">Pazartesi · 10:00 – 11:30 · 8 kişi</div>
+    <div class="a h1" id="h0" style="left:70px;top:410px;width:940px;font-size:112px"><span class="ln"><span>Toplantı</span></span><span class="ln"><span class="grad">bitti.</span></span></div>
+    <div id="note" class="a card" style="left:70px;top:720px;width:940px;height:400px;padding:44px">
+      <div style="font-size:26px;color:var(--mut);font-weight:600;letter-spacing:.06em">TOPLANTI NOTU</div>
+      <div class="mr" id="m1"><span>Karar</span><b>—</b></div>
+      <div class="mr" id="m2"><span>Sorumlu</span><b>—</b></div>
+      <div class="mr" id="m3"><span>Tarih</span><b>—</b></div></div>
+    <div class="a h1" id="q" style="left:70px;top:1200px;width:940px;font-size:66px;color:var(--red)">“Bunu sonra konuşalım.” 🙃</div>
+  </div>
+  <div class="scene" id="s1">
+    <div class="a h1" id="h1" style="left:70px;top:300px;width:940px;font-size:100px"><span class="ln"><span>Gorew'de toplantı</span></span><span class="ln"><span class="grad">görevle biter.</span></span></div>
+    <div id="tasks" class="a" style="left:70px;top:660px;width:940px;height:540px"></div>
+    <div class="a sub" id="s1s" style="left:70px;top:1240px;width:940px;font-size:40px;color:#cfd5df">Her kararın sahibi ve tarihi belli.<br><b style="color:#fff;font-weight:600">Bir sonraki toplantı “ne oldu?” ile başlamaz.</b></div>
+  </div>
+  <div class="scene" id="s2">
+    <img class="a" id="eIcon" src="../assets/logo_icon.png" style="left:440px;top:440px;width:200px;height:198px">
+    <img class="a" id="eWord" src="../assets/logo_word.png" style="left:315px;top:690px;width:450px;height:114px">
+    <div class="a h1" id="t1" style="left:0;top:930px;width:1080px;text-align:center;font-size:72px;font-weight:600;line-height:1.2">Toplantı bitti,</div>
+    <div class="a h1 grad" id="t2" style="left:0;top:1020px;width:1080px;text-align:center;font-size:72px;font-weight:600;line-height:1.2">iş başladı.</div>
+    <div class="a" id="url" style="left:300px;top:1260px;width:480px;height:84px;border-radius:42px;border:2px solid #2f3540;display:grid;place-items:center;font-size:34px;font-weight:600;color:#e6e9ef">www.gorew.com.tr</div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+const TK=[{t:'Bayi fiyat listesi güncelleme',f:'Caner A. · Teslim Perşembe',img:'av2',c:'#f0453a',s:'Açık'},
+ {t:'Fuar bütçesi onayı',f:'Finans · Sıra sizde',img:'av3',c:'#f5a524',s:'Onay bekliyor'},
+ {t:'Tedarikçi görüşmesi',f:'Burak Ö. · Teslim Cuma',img:'av1',c:'#2bd47f',s:'Yapılıyor'}];
+const tk=TK.map((k,i)=>{const d=el(`<div class="tc card a" style="top:${i*185}px"><img src="../assets/${k.img}.png"><div><div class="tt">${k.t}</div><div class="tf">${k.f}</div></div><div class="pill" style="background:${k.c}22;color:${k.c}"><i style="background:${k.c}"></i>${k.s}</div></div>`);$('tasks').appendChild(d);return d;});
+function render(t){glows(t);
+  if(scene($('s0'),t,0,5.0,.01,.3)){fadeUp($('pl'),t,.05,.4,14);reveal($('h0'),t,.15,.12);fadeUp($('note'),t,.9,.5,40);
+    ['m1','m2','m3'].forEach((m,i)=>fadeUp($(m),t,1.3+i*.3,.4,16));
+    const qp=P(t,2.6,3.0);const sh=t>2.6&&t<3.2?Math.sin(t*55)*8*(1-P(t,2.6,3.2)):0;T($('q'),{x:sh,y:(1-eo(qp))*20,op:qp});}
+  if(scene($('s1'),t,4.9,10.0)){reveal($('h1'),t,5.0);tk.forEach((d,i)=>{const t0=5.7+i*.3;const p=P(t,t0,t0+.4);T(d,{y:(1-eb(p))*40,s:L(.92,1,eb(p)),op:C(p*3)});});fadeUp($('s1s'),t,7.0,.5,20);}
+  if(scene($('s2'),t,9.9,14,.3,.01)){const ip=P(t,10.0,10.5);T($('eIcon'),{s:pop(t,10.0,.5),r:(1-eo(ip))*-90,op:C(ip*3)});
+    const wp=eo(P(t,10.3,10.8));$('eWord').style.clipPath=`inset(0 ${(1-wp)*100}% 0 0)`;T($('eWord'),{op:wp});
+    fadeUp($('t1'),t,10.7,.5,30);fadeUp($('t2'),t,11.0,.5,30);fadeUp($('url'),t,11.5,.5,16);}
+}
+window.render=render;window.ready=ready();autoplay(14);
+</script></body></html>
