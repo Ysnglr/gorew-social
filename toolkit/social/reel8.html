@@ -1,0 +1,47 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Reel 8</title>
+<link rel="stylesheet" href="common.css"><style>html,body,#stage{width:1080px;height:1920px}</style></head><body>
+<div id="stage">
+  <div id="glowA" class="glow" style="background:radial-gradient(circle,rgba(75,103,246,.28) 0%,rgba(75,103,246,0) 60%)"></div>
+  <div id="glowB" class="glow" style="background:radial-gradient(circle,rgba(0,214,170,.17) 0%,rgba(0,214,170,0) 60%)"></div>
+  <div class="scene" id="s0">
+    <div class="a pill" id="pl" style="left:70px;top:300px;background:rgba(75,103,246,.16);color:#9fb0ff;font-size:30px;height:68px">Salı · 14:30 · Müşteri ziyareti</div>
+    <div class="a h1" id="h0" style="left:70px;top:410px;width:940px;font-size:112px"><span class="ln"><span>Siz yoldasınız.</span></span><span class="ln"><span style="color:var(--red)">Ofiste iş durdu.</span></span></div>
+    <div id="nts" class="a" style="left:0;top:0;width:1080px;height:1920px"></div>
+    <div class="a h1" id="q" style="left:70px;top:1330px;width:940px;font-size:58px;color:#cfd5df">Çünkü onay <span style="color:#fff">masanızda</span> bekliyor.</div>
+  </div>
+  <div class="scene" id="s1">
+    <div class="a h1" id="h1" style="left:70px;top:300px;width:940px;font-size:104px"><span class="ln"><span>Onay masanızda</span></span><span class="ln"><span class="grad">değil, cebinizde.</span></span></div>
+    <img class="a shadow" id="ph" src="../assets/ph_onaylar.png" style="left:210px;top:620px;width:660px;height:819px">
+  </div>
+  <div class="scene" id="s2">
+    <div class="a h1" id="h2" style="left:70px;top:300px;width:940px;font-size:100px"><span class="ln"><span>Tek dokunuşla onay,</span></span><span class="ln"><span class="grad">iş yeniden akar.</span></span></div>
+    <div id="chainBox" class="a" style="left:70px;top:680px"></div>
+    <div class="a sub" id="s2s" style="left:70px;top:1220px;width:940px;font-size:40px;color:#cfd5df">Web, iOS ve Android.<br><b style="color:#fff;font-weight:600">Sıra ve kayıt her yerde aynı.</b></div>
+  </div>
+  <div class="scene" id="s3">
+    <img class="a" id="eIcon" src="../assets/logo_icon.png" style="left:440px;top:440px;width:200px;height:198px">
+    <img class="a" id="eWord" src="../assets/logo_word.png" style="left:315px;top:690px;width:450px;height:114px">
+    <div class="a h1" id="t1" style="left:0;top:930px;width:1080px;text-align:center;font-size:72px;font-weight:600;line-height:1.2">Siz neredeyseniz,</div>
+    <div class="a h1 grad" id="t2" style="left:0;top:1020px;width:1080px;text-align:center;font-size:72px;font-weight:600;line-height:1.2">onay orada.</div>
+    <div class="a" id="url" style="left:300px;top:1260px;width:480px;height:84px;border-radius:42px;border:2px solid #2f3540;display:grid;place-items:center;font-size:34px;font-weight:600;color:#e6e9ef">www.gorew.com.tr</div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+const NT=[{x:80,y:730,c:'#3d6fd6',i:'mail',h:'Satın Alma',m:'şimdi',b:'Onay olmadan sipariş verilemiyor',r:-2},
+ {x:380,y:900,c:'#d0453b',i:'bell',h:'Muhasebe',m:'1 saat önce',b:'Tedarikçi ödemesi bekliyor',k:'3',r:2},
+ {x:110,y:1070,c:'#2a9d5c',i:'chat',h:'Ekip Grubu',m:'2 dk',b:'Dönünce bakarız herhalde',r:-1.5}];
+const nts=NT.map(n=>{const d=notif(n);$('nts').appendChild(d);return d;});
+const c=chainCard('Satın alma · Depo forklift bakımı','Lojistik · 10 Kasım',STEPS);$('chainBox').appendChild(c.root);
+function render(t){glows(t);
+  if(scene($('s0'),t,0,5.3,.01,.3)){fadeUp($('pl'),t,.05,.4,14);reveal($('h0'),t,.15,.25);
+    nts.forEach((d,i)=>{const t0=1.2+i*.45;const p=P(t,t0,t0+.4);T(d,{y:(1-eb(p))*-50,r:NT[i].r,s:L(.9,1,eb(p)),op:C(p*3)});});
+    fadeUp($('q'),t,3.0,.5,20);}
+  if(scene($('s1'),t,5.2,9.4)){reveal($('h1'),t,5.3);const p=P(t,5.8,6.6);T($('ph'),{y:(1-eo(p))*260+Math.sin(t*1.2)*8,op:C(p*2)});}
+  if(scene($('s2'),t,9.3,14.6)){reveal($('h2'),t,9.4);fadeUp(c.root,t,9.9,.5,40);c.update(t,[10.6,11.2,11.8],12.0,12.4);fadeUp($('s2s'),t,12.6,.5,20);}
+  if(scene($('s3'),t,14.5,18,.3,.01)){const ip=P(t,14.6,15.1);T($('eIcon'),{s:pop(t,14.6,.5),r:(1-eo(ip))*-90,op:C(ip*3)});
+    const wp=eo(P(t,14.9,15.4));$('eWord').style.clipPath=`inset(0 ${(1-wp)*100}% 0 0)`;T($('eWord'),{op:wp});
+    fadeUp($('t1'),t,15.3,.5,30);fadeUp($('t2'),t,15.6,.5,30);fadeUp($('url'),t,16.1,.5,16);}
+}
+window.render=render;window.ready=ready();autoplay(18);
+</script></body></html>

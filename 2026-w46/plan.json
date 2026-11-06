@@ -1,0 +1,59 @@
+[
+ {
+  "date": "2026-11-09T10:00:00",
+  "type": "POST",
+  "topic": "Bu ay kaç harcama onaysız çıktı? Onaysız harcama riski ve satın alma kontrolü (sözlü onay, belirsiz onaycı, sonradan değişen tutar, denetim)",
+  "media": [
+   "gorew_c7_1.jpg",
+   "gorew_c7_2.jpg",
+   "gorew_c7_3.jpg",
+   "gorew_c7_4.jpg",
+   "gorew_c7_5.jpg",
+   "gorew_c7_6.jpg"
+  ],
+  "text": "Bu ay şirketinizden kaç harcama onaysız çıktı? 💸\n\nKüçük bir harcama sorun değil; kaydı olmayan harcama sorun. “Telefonda tamam demiştiniz” ile başlayan süreç, ay sonunda muhasebede “bu faturanın onayı kimde?” sorusuyla masanıza döner.\n\nGorew'de harcama kontrolü 4 adımda:\n1️⃣ Her talep yazılı: tutarı ve teklifiyle tek kayıt\n2️⃣ Zincir onay: sıra kimdeyse sorumluluk onda\n3️⃣ Onaylanan içerik kilitlenir, sonradan değiştirilemez\n4️⃣ Kim, ne zaman, hangi teklifle onayladı? Denetim kaydında\n\nHarcama onayla çıksın, kayıtla kalsın.\n👉 Demo için: www.gorew.com.tr\n\n#gorew #satınalma #harcamakontrolü #onaysüreci #şirketyönetimi #kobi #iştakibi"
+ },
+ {
+  "date": "2026-11-10T18:00:00",
+  "type": "REEL",
+  "topic": "Patron bakışı: siz yoldasınız, ofiste iş onay bekliyor → onay cebinizde (mobil + web)",
+  "media": [
+   "gorew_reel8.mp4"
+  ],
+  "coverMs": 3600,
+  "text": "Siz müşteri ziyaretindesiniz, ofiste iş durdu. 📵\n\nSebep çoğu zaman aynı: onay masanızda bekliyor. Sipariş verilemiyor, ödeme yapılamıyor, ekip “dönünce bakarız” diyor.\n\nGorew'de onay cebinizde:\n📱 Web, iOS ve Android'de aynı ekran\n✅ Tek dokunuşla onay, sıra bir sonraki kişiye geçer\n🔒 Onay kaydı ve sırası her yerde korunur\n\nSiz neredeyseniz, onay orada.\n👉 www.gorew.com.tr\n\n#gorew #onaysüreci #mobilonay #şirketyönetimi #kobi #yönetici #iştakibi"
+ },
+ {
+  "date": "2026-11-11T10:00:00",
+  "type": "POST",
+  "topic": "Şirket büyürken düzeni koruyan 4 ayar: çalışma alanları, Kanban panolar, roller ve yetkiler, her şey tek yerde",
+  "media": [
+   "gorew_c8_1.jpg",
+   "gorew_c8_2.jpg",
+   "gorew_c8_3.jpg",
+   "gorew_c8_4.jpg",
+   "gorew_c8_5.jpg",
+   "gorew_c8_6.jpg"
+  ],
+  "text": "Şirketiniz büyürken düzen de büyüyor mu? 📈\n\nEkip büyüdükçe “Bu iş hangi birimde?”, “Kime rapor veriyorum?” soruları da çoğalır. Cevap her seferinde size sorulmasın.\n\nDüzeni koruyan 4 ayar:\n1️⃣ Çalışma alanları: her birimin işi kendi alanında, siz hepsini görürsünüz\n2️⃣ Kanban panolar: işlerin nerede biriktiği bir bakışta belli\n3️⃣ Roller ve yetkiler: kim neyi görür, kim onaylar, siz belirlersiniz\n4️⃣ Her şey tek yerde: görev, onay, rutin ve belge aynı platformda\n\nBüyürken de düzen sizde.\n👉 Demo için: www.gorew.com.tr\n\n#gorew #şirketyönetimi #kobi #büyüme #kanban #iştakibi #yönetici"
+ },
+ {
+  "date": "2026-11-12T18:00:00",
+  "type": "REEL",
+  "topic": "Ofis mizahı: Pazartesi sabahı gelen kutusunda her şey 'ACİL' → acil olan teslim tarihinden belli",
+  "media": [
+   "gorew_reel9.mp4"
+  ],
+  "coverMs": 3900,
+  "text": "Pazartesi 09:05. Gelen kutusunda her şey ACİL. 🤯\n\n“ACİL: Teklif”, “ÇOK ACİL!!!”, “Acil değil ama acil”… Hepsi acilse, hangisi gerçekten önce? Ekip en yüksek sesle gelene koşar, gerçekten tarihi yaklaşan iş geride kalır.\n\nGorew'de sırayı takvim belirler:\n📅 Her işin teslim tarihi ekranda\n👤 Her işin bir sahibi var\n⏰ Geciken iş yöneticisine bildirilir\n\nAcil olan bağırmaz, takvimde görünür.\n👉 www.gorew.com.tr\n\n#gorew #ofishayatı #pazartesi #şirketyönetimi #kobi #iştakibi #önceliklendirme"
+ },
+ {
+  "date": "2026-11-13T10:00:00",
+  "type": "STORY",
+  "topic": "Cuma kapanışı: şirket verileriniz güvende mi? KVKK, 256-bit şifreleme, %99,9 erişilebilirlik",
+  "media": [
+   "gorew_story5.mp4"
+  ],
+  "text": ""
+ }
+]

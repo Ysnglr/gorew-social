@@ -19,5 +19,10 @@
 | 2026-11-04 10:00 | Carousel (6) | Her ay tekrarlanan işler kimin aklında? Sektöre göre rutinler (üretim, perakende, hizmet/ajans, saha) | 2026-w45/gorew_c6_* |
 | 2026-11-05 18:00 | Reel 14 sn | Ofis mizahı: toplantı bitti, “Bunu sonra konuşalım” → toplantı görevle biter | 2026-w45/gorew_reel7.mp4 |
 | 2026-11-06 10:00 | Story 9 sn | Cuma kapanışı: masanızda bekleyen onay kaldı mı? | 2026-w45/gorew_story4.mp4 |
+| 2026-11-09 10:00 | Carousel (6) | Bu ay kaç harcama onaysız çıktı? Sözlü onay, belirsiz onaycı, sonradan değişen tutar, denetim kaydı | 2026-w46/gorew_c7_* |
+| 2026-11-10 18:00 | Reel 18 sn | Patron bakışı: siz yoldasınız, ofiste iş onay bekliyor → onay cebinizde (web, iOS, Android) | 2026-w46/gorew_reel8.mp4 |
+| 2026-11-11 10:00 | Carousel (6) | Şirket büyürken düzeni koruyan 4 ayar: çalışma alanları, Kanban panolar, roller ve yetkiler, her şey tek yerde | 2026-w46/gorew_c8_* |
+| 2026-11-12 18:00 | Reel 14 sn | Ofis mizahı: Pazartesi sabahı her şey “ACİL” → acil olan teslim tarihinden belli | 2026-w46/gorew_reel9.mp4 |
+| 2026-11-13 10:00 | Story 9 sn | Cuma kapanışı: şirket verileriniz güvende mi? KVKK, 256-bit, %99,9 | 2026-w46/gorew_story5.mp4 |
 
-Henüz işlenmemiş konular (öneri havuzu — hepsi patron/şirket sahibi gözünden anlatılır): onaysız harcama riski ve satın alma kontrolü · masraf takibi · süre takibi · kullanıcı rolleri · Kanban panolar ve çalışma alanları · KVKK ve güvenlik / yedekleme · mobil + web kullanım · müşteri referansları (Baumit, Alb Menkul Değerler) · izin / işe alım onayları · ofis mizahı ("son hali_v3_final" ve toplantı işlendi; başka örnek: Pazartesi sabahı, "acil" etiketli her şey) · fiyat/demonun duyurusu
+Henüz işlenmemiş konular (öneri havuzu — hepsi patron/şirket sahibi gözünden anlatılır): masraf takibi · süre takibi · yedekleme ve veri sahipliği (KVKK/256-bit story'de kısaca işlendi; derin anlatım yapılmadı) · müşteri referansları (Baumit, Alb Menkul Değerler) · izin / işe alım onayları · ofis mizahı ("son hali_v3_final", toplantı ve Pazartesi "acil" işlendi; başka örnek: "Kim bakıyordu bu işe?" devir teslimi, yıl sonu telaşı) · fiyat/demonun duyurusu

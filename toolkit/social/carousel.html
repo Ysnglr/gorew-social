@@ -130,7 +130,56 @@ const DECKS={
    <div class="big tx" style="top:540px">Müşteri raporu, fatura, yenileme görüşmesi…<br>Gecikirse <b>müşteri memnuniyeti</b> öder.</div><div id="rowsBox" class="a" style="left:70px;top:800px"></div>`,
   ()=>`<div class="big k grad" style="top:230px">04</div><div class="big h1" style="top:420px;font-size:84px">Saha ve şantiye.</div>
    <div class="big tx" style="top:540px">İş güvenliğinde atlanan kontrolün bedeli<br>ağırdır. <b>Geciken iş yöneticisine bildirilir</b>,<br>siz sormadan.</div><div id="rowsBox" class="a" style="left:70px;top:820px"></div>`,
-  ()=>ctaT('Tekrarlanan işler<br><span class="grad">kendini hatırlatsın.</span>')]
+  ()=>ctaT('Tekrarlanan işler<br><span class="grad">kendini hatırlatsın.</span>')],
+ c7:[
+  ()=>`<div class="big h1" style="top:260px;font-size:100px">Bu ay kaç harcama<br><span class="grad">onaysız çıktı?</span></div>
+   <div class="big tx" style="top:540px">Küçük bir harcama sorun değil.<br>Kaydı olmayan harcama sorun.</div><div id="nts"></div>`,
+  ()=>`<div class="big k grad" style="top:230px">01</div><div class="big h1" style="top:420px;font-size:84px">“Telefonda tamam<br>demiştiniz.”</div>
+   <div class="big tx" style="top:640px">Sözlü onay iz bırakmaz. Her talep <b>yazılı,<br>tutarı ve teklifiyle</b> tek bir kayıt olsun.</div>
+   <div class="a card" style="left:80px;top:830px;width:920px;height:380px;padding:44px">
+     <div style="font-size:24px;color:var(--mut)">Başlık</div><div style="font-size:36px;font-weight:600;margin-top:6px">Depo raf sistemi · Lojistik</div>
+     <div style="display:flex;gap:60px;margin-top:34px"><div><div style="font-size:24px;color:var(--mut)">Çalışma alanı</div><div style="font-size:32px;margin-top:6px">Satın alma</div></div><div><div style="font-size:24px;color:var(--mut)">Ek</div><div style="font-size:32px;margin-top:6px">teklif_raf.pdf</div></div></div>
+     <div style="position:absolute;right:44px;bottom:44px;height:76px;padding:0 40px;border-radius:38px;background:var(--blue);display:grid;place-items:center;font-size:30px;font-weight:700">Onaya gönder</div></div>`,
+  ()=>`<div class="big k grad" style="top:230px">02</div><div class="big h1" style="top:420px;font-size:84px">Kim onayladı,<br>belli değil.</div>
+   <div class="big tx" style="top:640px">Zincir onayda talep sırayla ilerler.<br><b>Sıra kimdeyse sorumluluk onda</b>, herkes görür.</div><div id="chainBox" class="a" style="left:117px;top:800px;transform:scale(.9);transform-origin:0 0"></div>`,
+  ()=>`<div class="big k grad" style="top:230px">03</div><div class="big h1" style="top:420px;font-size:84px">Onaydan sonra<br>tutar değişti.</div>
+   <div class="big tx" style="top:640px">Onaylanan içerik <b>kilitlenir</b>, değiştirilemez.<br>Onayladığınız neyse, ödenen de o.</div><div id="chainBox" class="a" style="left:117px;top:800px;transform:scale(.9);transform-origin:0 0"></div>`,
+  ()=>`<div class="big k grad" style="top:230px">04</div><div class="big h1" style="top:420px;font-size:84px">Denetimde belge<br>aranıyor.</div>
+   <div class="big tx" style="top:640px">Kim, ne zaman, hangi teklifle onayladı?<br><b>Hepsi denetim kaydında</b>, tek tıkta.</div>
+   <div class="a card" style="left:80px;top:820px;width:920px;height:400px;padding:40px 44px">
+    <div style="font-size:26px;color:var(--mut);font-weight:600;letter-spacing:.06em">DENETİM KAYDI · DEPO RAF SİSTEMİ</div>
+    ${[['Talep açıldı · teklif_raf.pdf eklendi','Burak Ö. · 9 Kasım 10:12'],['Birim yöneticisi onayladı','9 Kasım 11:40'],['Finans onayladı','9 Kasım 15:05'],['Genel müdür onayladı · içerik kilitlendi','10 Kasım 09:18']].map((r,i)=>`
+    <div style="display:flex;align-items:center;gap:22px;margin-top:${i?18:30}px">
+     <div style="width:22px;height:22px;border-radius:50%;flex:none;background:${i==3?'var(--green)':'#4b67f6'}"></div>
+     <div style="flex:1;font-size:29px;font-weight:600;white-space:nowrap">${r[0]}</div><div style="font-size:23px;color:var(--mut);white-space:nowrap">${r[1]}</div></div>`).join('')}
+   </div>`,
+  ()=>ctaT('Harcama onayla çıksın,<br><span class="grad">kayıtla kalsın.</span>')],
+ c8:[
+  ()=>`<div class="big h1" style="top:260px;font-size:100px">Şirket büyürken<br>düzeni koruyan<br><span class="grad">4 ayar</span></div>
+   <div class="big tx" style="top:640px">Ekip büyüdükçe “kim neye bakıyor?”<br>sorusu da büyür.</div><div id="nts"></div>`,
+  ()=>`<div class="big k grad" style="top:230px">01</div><div class="big h1" style="top:420px;font-size:84px">Çalışma alanları.</div>
+   <div class="big tx" style="top:540px">Her birimin işleri <b>kendi alanında</b>.<br>Satın almanın işi pazarlamanın listesine<br>karışmaz; siz hepsini görürsünüz.</div>
+   <div class="a" style="left:80px;top:840px;width:920px;display:flex;flex-wrap:wrap;gap:22px">
+    ${[['Satın alma','#4b67f6',12],['Pazarlama','#2bd47f',8],['Finans','#f5a524',5],['İnsan kaynakları','#00a3ff',4],['Lojistik','#f0453a',9]].map(w=>`<div class="chip" style="color:#fff;height:96px;font-size:32px;padding:0 34px"><i style="background:${w[1]};width:20px;height:20px"></i>${w[0]}<span style="color:var(--mut);font-size:26px;margin-left:6px">${w[2]} açık iş</span></div>`).join('')}</div>`,
+  ()=>`<div class="big k grad" style="top:230px">02</div><div class="big h1" style="top:420px;font-size:84px">Kanban panolar.</div>
+   <div class="big tx" style="top:540px">İşler sütunlarda ilerler. <b>Nerede biriktiği</b><br>bir bakışta belli, rapor beklemeden.</div>
+   <div class="a" style="left:80px;top:780px;width:920px;display:flex;gap:16px">
+    ${[['Açık','#f0453a',['Bayi listesi','Fuar afişi']],['Yapılıyor','#2bd47f',['Stand kurulumu','Katalog baskısı','Teklif derleme']],['Hazır','#f5a524',['Basın bülteni']],['Kapatıldı','#949cab',['Otel rezervasyonu','Vize evrakı']]].map(c=>`<div style="flex:1;background:#10131a;border:1px solid var(--line);border-radius:26px;padding:22px 14px;height:400px">
+     <div style="display:flex;align-items:center;gap:10px;font-size:24px;font-weight:700;margin:0 6px 16px"><i style="width:14px;height:14px;border-radius:50%;background:${c[1]};display:block"></i>${c[0]}</div>
+     ${c[2].map(x=>`<div style="background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 14px;font-size:24px;font-weight:600;margin-bottom:14px;line-height:1.25">${x}</div>`).join('')}</div>`).join('')}</div>`,
+  ()=>`<div class="big k grad" style="top:230px">03</div><div class="big h1" style="top:420px;font-size:84px">Roller ve yetkiler.</div>
+   <div class="big tx" style="top:540px">Kim neyi görür, kim onaylar? <b>Siz belirlersiniz.</b><br>Yeni gelen çalışan da ilk gün yerini bilir.</div>
+   <div class="a card" style="left:80px;top:790px;width:920px;height:420px;padding:36px 44px">
+    <div style="font-size:24px;color:var(--mut);font-weight:600;letter-spacing:.06em">ÖRNEK YETKİ YAPISI</div>
+    ${[['av4','Genel müdür','Tüm çalışma alanları'],['av3','Birim yöneticisi','Kendi birimi · onaylar'],['av1','Ekip üyesi','Kendi görevleri']].map((r,i)=>`
+    <div style="display:flex;align-items:center;gap:22px;margin-top:${i?22:28}px;padding-top:${i?22:0}px;border-top:${i?'1px solid var(--line)':'0'}">
+     <img src="../assets/${r[0]}.png" style="width:72px;height:72px;border-radius:50%"><div style="flex:1;font-size:31px;font-weight:600">${r[1]}</div><div class="pill" style="height:52px;font-size:23px;background:rgba(75,103,246,.16);color:#9fb0ff">${r[2]}</div></div>`).join('')}
+   </div>`,
+  ()=>`<div class="big k grad" style="top:230px">04</div><div class="big h1" style="top:420px;font-size:84px">Her şey tek yerde.</div>
+   <div class="big tx" style="top:540px">Görev, onay, rutin ve belge aynı platformda.<br>Ekip büyüse de <b>bakılacak yer tek</b>.</div>
+   <div class="a" style="left:80px;top:790px;width:920px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    ${[['chk','Görev','Sahibi ve tarihi belli'],['thumb','Onay','Sırayla, kayıtlı'],['rep','Rutin','Vakti gelince görev'],['file','Belge','İşin içinde arşiv']].map(x=>{let ic=x[0]==='chk'?ICON.chk(36):x[0]==='rep'?ICON.rep:ICON[x[0]];ic=ic.replace(/stroke="#7d93ff"/,'stroke="#fff"').replace('fill="currentColor"','fill="#fff"');if(!/width=/.test(ic.slice(0,40)))ic=ic.replace('<svg ','<svg width="36" height="36" ');return `<div class="card" style="height:200px;padding:32px 34px"><div style="width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,var(--g1),var(--g2));display:grid;place-items:center">${ic}</div><div style="font-size:36px;font-weight:700;margin-top:18px">${x[1]}</div><div style="font-size:25px;color:var(--mut);margin-top:4px">${x[2]}</div></div>`}).join('')}</div>`,
+  ()=>ctaT('Büyürken de<br><span class="grad">düzen sizde.</span>')]
 };
 function ctaT(h){return cta.replace(/<div class="big h1"[^]*?<\/div>/,`<div class="big h1" style="top:520px;text-align:center;font-size:84px">${h}</div>`).replace('top:860px','top:770px').replace('top:1060px','top:980px');}
 const n=DECKS[deck].length;
@@ -139,14 +188,16 @@ const s=el(`<div class="slide" style="display:block">${DECKS[deck][idx-1]()}
  ${idx<n?`<div class="swipe">${swipe}</div>`:''}<div class="foot">@gorew.app</div></div>`);
 $('slides').appendChild(s);
 T($('glowA'),{x:-600+idx*90,y:-700});T($('glowB'),{x:200-idx*60,y:500});
-const NTS={c3:[{x:80,y:760,r:-3,c:'#d0453b',i:'cal',h:'Takvim',m:'yarın',b:'Yıllık izin · 10 gün'},{x:380,y:910,r:2.5,c:'#3d6fd6',i:'mail',h:'E-posta',m:'şimdi',b:'Onayınızı bekleyen 7 talep',k:'7'},{x:110,y:1060,r:-1.5,c:'#2a9d5c',i:'chat',h:'Ekip Grubu',m:'2 dk',b:'Bunu kime soracağız?'}],
+const NTS={c7:[{x:80,y:760,r:-3,c:'#2a9d5c',i:'chat',h:'Satın Alma Grubu',m:'dün',b:'Patron tamam dedi, aldık.'},{x:380,y:910,r:2.5,c:'#3d6fd6',i:'mail',h:'Muhasebe',m:'2 gün önce',b:'Bu faturanın onayı kimde?',k:'6'},{x:110,y:1060,r:-1.5,c:'#d0453b',i:'file',h:'Fatura',m:'şimdi',b:'Tutar teklifle uyuşmuyor'}],
+ c8:[{x:80,y:815,r:-3,c:'#2a9d5c',i:'chat',h:'Şirket Grubu',m:'şimdi',b:'Bu iş hangi birimde?'},{x:380,y:960,r:2.5,c:'#3d6fd6',i:'mail',h:'Yeni çalışan',m:'dün',b:'Kime rapor veriyorum?',k:'3'},{x:110,y:1105,r:-1.5,c:'#d0453b',i:'cal',h:'Takvim',m:'gecikti',b:'Haftalık durum toplantısı'}],
+ c3:[{x:80,y:760,r:-3,c:'#d0453b',i:'cal',h:'Takvim',m:'yarın',b:'Yıllık izin · 10 gün'},{x:380,y:910,r:2.5,c:'#3d6fd6',i:'mail',h:'E-posta',m:'şimdi',b:'Onayınızı bekleyen 7 talep',k:'7'},{x:110,y:1060,r:-1.5,c:'#2a9d5c',i:'chat',h:'Ekip Grubu',m:'2 dk',b:'Bunu kime soracağız?'}],
  c5:[{x:80,y:760,r:-3,c:'#3d6fd6',i:'mail',h:'Mali Müşavir',m:'dün',b:'Faturaları tekrar atar mısınız?'},{x:380,y:910,r:2.5,c:'#3d6fd6',i:'mail',h:'Avukat',m:'3 gün önce',b:'Re: Fw: Sözleşme taslağı v3',k:'14'},{x:110,y:1060,r:-1.5,c:'#2a9d5c',i:'chat',h:'Ajans Grubu',m:'şimdi',b:'Görseller onaylandı mı?'}],
  c6:[{x:80,y:815,r:-3,c:'#d0453b',i:'cal',h:'Takvim',m:'gecikti',b:'Kompresör bakımı gecikti'},{x:380,y:960,r:2.5,c:'#2a9d5c',i:'chat',h:'Şube Grubu',m:'2 dk',b:'Stok sayımı yapıldı mı?'},{x:110,y:1105,r:-1.5,c:'#3d6fd6',i:'mail',h:'Müşteri',m:'dün',b:'Aylık rapor ne zaman gelir?'}],
  c4:[{x:80,y:790,r:-3,c:'#d0453b',i:'cal',h:'Takvim',m:'gecikti',b:'Ruhsat yenileme gecikti'},{x:380,y:935,r:2.5,c:'#d0453b',i:'file',h:'Sözleşme',m:'dün',b:'Kira sözleşmesi bitti'},{x:110,y:1080,r:-1.5,c:'#d0453b',i:'bell',h:'Hatırlatma',m:'3 gün önce',b:'Poliçe yenilenmedi'}]};
 if($('nts')&&NTS[deck]){NTS[deck].forEach(x=>{const e=notif(x);e.style.transform=`rotate(${x.r}deg)`;$('nts').appendChild(e);});}
 else if($('nts')){[{x:80,y:780,r:-3,c:'#2a9d5c',i:'chat',h:'Ekip Grubu',m:'şimdi',b:'Bu iş kimdeydi?',k:'48'},{x:380,y:930,r:2.5,c:'#3d6fd6',i:'mail',h:'E-posta',m:'2 dk',b:'Re: Re: Fw: Teklif onayı?'},{x:110,y:1080,r:-1.5,c:'#d0453b',i:'cal',h:'Takvim',m:'gecikti',b:'Ruhsat yenileme gecikti'}].forEach(x=>{const e=notif(x);e.style.transform=`rotate(${x.r}deg)`;$('nts').appendChild(e);});}
-if($('chainBox')){const c=(deck==='c5'?chainCard('Kampanya görselleri · Kasım','Pazarlama · 4 Kasım',[{img:'av1',role:'Ajans'},{img:'av2',role:'Pazarlama'},{img:'av3',role:'Birim yön.'},{img:'av4',role:'Genel müdür'}]):deck==='c3'?chainCard('Fuar stand ödemesi','Pazarlama · 28 Ekim',STEPS):chainCard('Satın alma · MacBook Pro','Planlama · 14 Nisan',STEPS));$('chainBox').appendChild(c.root);
-  const full=(deck==='c2'&&idx===5);const part=(deck==='c2'&&idx===3)||(deck==='c3'&&idx===3)||(deck==='c5');
+if($('chainBox')){const c=(deck==='c5'?chainCard('Kampanya görselleri · Kasım','Pazarlama · 4 Kasım',[{img:'av1',role:'Ajans'},{img:'av2',role:'Pazarlama'},{img:'av3',role:'Birim yön.'},{img:'av4',role:'Genel müdür'}]):deck==='c7'?chainCard('Satın alma · Depo raf sistemi','Lojistik · 9 Kasım',STEPS):deck==='c3'?chainCard('Fuar stand ödemesi','Pazarlama · 28 Ekim',STEPS):chainCard('Satın alma · MacBook Pro','Planlama · 14 Nisan',STEPS));$('chainBox').appendChild(c.root);
+  const full=(deck==='c2'&&idx===5)||(deck==='c7'&&idx===4);const part=(deck==='c2'&&idx===3)||(deck==='c3'&&idx===3)||(deck==='c5')||(deck==='c7'&&idx===3);
   c.update(full?99:(part?11.2:99),[10.5,11.0,11.5],full?11.8:(part?99:11.8),full?12.1:99);c.root.style.opacity=1;c.root.style.transform='none';}
 const ROWS={'c3_4':[{t:'Haftalık satış raporu',f:'Her cuma · 16:00'},{t:'Araç bakımı',f:'Her 3 ayda bir'},{t:'Kira ödemesi',f:'Her ayın 1\'i'}],
  'c4_2':[{t:'İşyeri ruhsatı yenileme',f:'Yıllık · 14 Ekim',late:1},{t:'Çevre izni belgesi',f:'Yıllık · 2 Aralık'}],
